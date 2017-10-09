@@ -24,19 +24,14 @@
     
     <mvc:default-servlet-handler />
 
-	<!-- <mvc:interceptors>  
-	    多个拦截器，顺序执行  
-		<mvc:interceptor>
-		  /** 表示所有的url，包括子url路径  
-		    <mvc:mapping path="/**"/>  
-		    <bean class="cn.labelnet.ssm.filter.HanderInterceptor1"></bean>
-		</mvc:interceptor>
-		配置登陆拦截器  
+	<mvc:interceptors>  
+	    <!-- 多个拦截器，顺序执行   -->
+		<!-- 配置登陆拦截器   -->
 		<mvc:interceptor>  
 		    <mvc:mapping path="/**"/>  
-		    <bean class="com.how2java.filter.LoginHandlerIntercepter"></bean>  
+		    <bean id="filterlogin" class="com.how2java.filter.LoginHandlerIntercepter"></bean>  
 		</mvc:interceptor>
-	</mvc:interceptors> -->
+	</mvc:interceptors>
 
     <bean
         class="org.springframework.web.servlet.view.InternalResourceViewResolver">
