@@ -14,7 +14,7 @@ public class Login_RegServiceImpl implements Login_RegService {
 	@Override
 	public User login(String name, String pass) {
 		// TODO Auto-generated method stub
-		return loginMapper.Login(name, pass);
+		return loginMapper.selectUser(name, pass);
 	}
 
 	@Override

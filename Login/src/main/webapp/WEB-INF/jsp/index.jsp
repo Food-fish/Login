@@ -80,7 +80,8 @@
 
 												<span class="msg-time">
 													<i class="ace-icon fa fa-clock-o"></i>
-													<span>2014-12-15 18:00:00</span>
+													<!-- <span>2014-12-15 18:00:00</span> -->
+													<span>${sessionScope.user.per_info.joinTime}</span>
 												</span>
 											</span>
 										</a>
@@ -171,7 +172,7 @@
 							<img class="nav-user-photo" src="${path}/avatars/user.jpg" alt="Jason's Photo" />
 							<span class="user-info">
 								欢迎您<br />
-								陈子昂
+								${sessionScope.user.per_info.userName}
 							</span>
 
 							<i class="ace-icon fa fa-caret-down"></i>
@@ -195,7 +196,7 @@
 							<li class="divider"></li>
 
 							<li>
-								<a href="#">
+								<a href="Logout">
 									<i class="ace-icon fa fa-power-off"></i>
 									登出
 								</a>

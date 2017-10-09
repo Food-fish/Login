@@ -26,7 +26,15 @@ public class LoginHandlerIntercepter implements HandlerInterceptor{
 			}else{
 				return true;
 			}
+		}else if(url.indexOf("Logout")!=-1){
+			session.setAttribute("user",null);
+			/*request.getRequestDispatcher("/").forward(request, response);*/
+			response.sendRedirect(request.getContextPath() + "/");
+			return false;
+		}else if(url.indexOf("/")>=1){
+			return true;
 		}else{
+			System.out.println(url);
 			return true;
 		}
 	}
