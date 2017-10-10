@@ -40,7 +40,7 @@ public class Login {
 		HttpSession session = request.getSession();
 		session.setAttribute("user", user);
 		try {
-			response.sendRedirect(request.getContextPath() + "/index");
+			response.sendRedirect(request.getContextPath() + "/Page");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -48,14 +48,10 @@ public class Login {
 		return null;
 	}
 	
-	@RequestMapping(value="/")
-	public ModelAndView login(HttpServletRequest request, HttpServletResponse response){
+	@RequestMapping("/")
+	public ModelAndView loginAction(){
 		return new ModelAndView("login");
 	}
 	
-	@RequestMapping(value="/index")
-	public ModelAndView index(HttpServletRequest request, HttpServletResponse response){
-		return new ModelAndView("index");
-	}
 
 }

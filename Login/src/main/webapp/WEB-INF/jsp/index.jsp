@@ -27,8 +27,21 @@
 	<script src="${path}/js/html5shiv.min.js"></script>
 	<script src="${path}/js/respond.min.js"></script>
 	<![endif]-->
+	<script type="text/javascript">
+		window.onload=function(){
+		} 
+	</script>
 </head>
 <body class="no-skin">
+	<%-- <table>
+	<c:forEach items="${menu}" var="c" varStatus="st">
+        <tr>
+            <td>${c.menuId}</td>
+            <td>${c.levelMenuId}</td>
+            <td>${c.menuName}</td>
+        </tr>
+    </c:forEach>
+    </table> --%>
 	<div id="navbar" class="navbar navbar-default">
 		<div class="navbar-container" id="navbar-container">
 
@@ -169,7 +182,7 @@
 					<!-- #section:basics/navbar.user_menu -->
 					<li class="light-blue">
 						<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-							<img class="nav-user-photo" src="${path}/avatars/user.jpg" alt="Jason's Photo" />
+							<img class="nav-user-photo" src="${sessionScope.user.per_info.photo}" alt="Jason's Photo" />
 							<span class="user-info">
 								欢迎您<br />
 								${sessionScope.user.per_info.userName}
@@ -187,7 +200,7 @@
 							</li>
 
 							<li>
-								<a href="profile.html">
+								<a href="${path}/Page/UserPage">
 									<i class="ace-icon fa fa-user"></i>
 									个人信息设置
 								</a>
@@ -228,12 +241,10 @@
 
 					<b class="arrow"></b>
 				</li>
-
 				<li class="">
 					<a href="#" class="dropdown-toggle">
 						<i class="menu-icon fa fa-desktop"></i>
-						<span class="menu-text"> UI &amp; 元素 </span>
-
+						<span class="menu-text">UI & 元素</span>
 						<b class="arrow fa fa-angle-down"></b>
 					</a>
 

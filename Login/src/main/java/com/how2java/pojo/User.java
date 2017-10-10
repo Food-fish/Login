@@ -1,6 +1,12 @@
 package com.how2java.pojo;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private int user_Id;
 	/*用户名*/
 	private String user_Name;

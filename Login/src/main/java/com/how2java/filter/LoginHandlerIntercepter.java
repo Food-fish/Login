@@ -21,7 +21,7 @@ public class LoginHandlerIntercepter implements HandlerInterceptor{
 		
 		if(url.equals("/")){
 			if(session.getAttribute("user")!=null){
-				response.sendRedirect(request.getContextPath() + "/index");
+				response.sendRedirect(request.getContextPath() + "/Page");
 				return false;
 			}else{
 				return true;
@@ -29,7 +29,7 @@ public class LoginHandlerIntercepter implements HandlerInterceptor{
 		}else if(url.indexOf("Logout")!=-1){
 			session.setAttribute("user",null);
 			/*request.getRequestDispatcher("/").forward(request, response);*/
-			response.sendRedirect(request.getContextPath() + "/");
+			response.sendRedirect(request.getContextPath() + "");
 			return false;
 		}else if(url.indexOf("/")>=1){
 			return true;

@@ -8,6 +8,8 @@ public class Per_info {
 	private String userName;
 	/*性别*/
 	private String userSex;
+	/*年龄*/
+	private int userAge;
 	/*头像*/
 	private String photo;
 	/*地址*/
@@ -35,6 +37,12 @@ public class Per_info {
 	}
 	public void setUserSex(String userSex) {
 		this.userSex = userSex;
+	}
+	public int getUserAge() {
+		return userAge;
+	}
+	public void setUserAge(int userAge) {
+		this.userAge = userAge;
 	}
 	public String getPhoto() {
 		return photo;

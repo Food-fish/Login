@@ -4,35 +4,57 @@
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.how2java.mapper.LoginMapper">
+	<cache eviction="FIFO" flushInterval="60000" size="512" readOnly="true" />
 	<resultMap id="BaseResultMap" type="com.how2java.pojo.User">  
         <id column="user_Id" property="user_Id" jdbcType="INTEGER"/>  
         <result column="user_Name" property="user_Name" jdbcType="VARCHAR"/>  
         <result column="user_Pass" property="user_Pass" jdbcType="VARCHAR"/>  
     </resultMap>
+    <resultMap id="PerResultMap" type="com.how2java.pojo.Per_info">  
+        <id column="perId" property="perId" jdbcType="INTEGER"/>  
+        <result column="userName" property="userName" jdbcType="VARCHAR"/>
+        <result column="userSex" property="userSex" jdbcType="VARCHAR"/>
+        <result column="userAge" property="userAge" jdbcType="INTEGER"/>
+        <result column="photo" property="photo" jdbcType="VARCHAR"/>
+        <result column="address" property="address" jdbcType="VARCHAR"/>
+        <result column="joinTime" property="joinTime" jdbcType="DATE"/>
+        <result column="introduce" property="introduce" jdbcType="VARCHAR"/>
+        <result column="online" property="online" jdbcType="INTEGER"/>
+    </resultMap>
     <resultMap id="queryForListMap" type="com.how2java.pojo.User">  
         <id column="user_Id" property="user_Id" jdbcType="INTEGER"/>  
-        <result column="user_Name" property="user_Name" jdbcType="VARCHAR"/>  
+        <result column="user_Name" property="user_Name" jdbcType="VARCHAR"/>
         <result column="user_Pass" property="user_Pass" jdbcType="VARCHAR"/>
         <collection property="per_info" ofType="com.how2java.pojo.Per_info">  
             <id column="perId" property="perId" jdbcType="INTEGER" />  
             <result column="userName" property="userName" jdbcType="VARCHAR" />  
             <result column="userSex" property="userSex" jdbcType="VARCHAR" />  
+            <result column="userAge" property="userAge" jdbcType="INTEGER" />
             <result column="photo" property="photo" jdbcType="VARCHAR" />  
-            <result column="address" property="address" jdbcType="INTEGER" />  
+            <result column="address" property="address" jdbcType="VARCHAR" />  
             <result column="joinTime" property="joinTime" jdbcType="DATE" />
             <result column="introduce" property="introduce" jdbcType="VARCHAR" />
             <result column="online" property="online" jdbcType="INTEGER" />  
         </collection>  
     </resultMap>
     <sql id="Base_Column_List">  
-      user.user_Id, user.user_Name, user.user_Pass, Per_info.perId, Per_info.userName, Per_info.userSex, Per_info.photo, Per_info.address, Per_info.joinTime, Per_info.introduce, Per_info.online
+      user.user_Id, user.user_Name, user.user_Pass, Per_info.perId, Per_info.userName, Per_info.userSex, Per_info.userAge, Per_info.photo, Per_info.address, Per_info.joinTime, Per_info.introduce, Per_info.online
+    </sql>
+    <sql id="Friends_Column_List">  
+      Per_info.perId, Per_info.userName, Per_info.userSex, Per_info.userAge, Per_info.photo, Per_info.address, Per_info.joinTime, Per_info.introduce, Per_info.online
     </sql>
     <select id="selectUser" resultMap="queryForListMap" parameterType="java.lang.String">  
         select  
         <include refid="Base_Column_List"/>  
-        from user,Per_info where user_name= #{0} and user_pass= #{1}
+        from user inner join Per_info on Per_info.perid=user.perId where user_name= #{0} and user_pass= #{1}
     </select>
+	<!-- 没用 -->
     <select id="Login" parameterType="java.lang.String" resultType="User">
         select * from user where user_name= #{0} and user_pass= #{1}
+    </select>
+    <select id="Fridens" parameterType="java.lang.Integer" resultMap="PerResultMap">
+        select 
+        <include refid="Friends_Column_List"/>
+        from friends inner join Per_info on friends.userId2=Per_info.perId where userId1= #{0} or userId2= #{0}
     </select>
 </mapper>

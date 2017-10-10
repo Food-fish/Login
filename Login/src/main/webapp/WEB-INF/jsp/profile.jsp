@@ -161,10 +161,10 @@
 					<!-- #section:basics/navbar.user_menu -->
 					<li class="light-blue">
 						<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-							<img class="nav-user-photo" src="${path}/avatars/user.jpg" alt="Jason's Photo" />
+							<img class="nav-user-photo" src="${sessionScope.user.per_info.photo}" alt="Jason's Photo" />
 							<span class="user-info">
 								欢迎您<br />
-								陈子昂
+								${sessionScope.user.per_info.userName}
 							</span>
 
 							<i class="ace-icon fa fa-caret-down"></i>
@@ -652,7 +652,7 @@
 												<div class="row">
 													<div class="col-xs-12 col-sm-3 center">
 														<span class="profile-picture">
-															<img class="editable img-responsive" alt="Alex's Avatar" id="avatar2" src="${path}/avatars/profile-pic.jpg" />
+															<img class="editable img-responsive" alt="Alex's Avatar" id="avatar2" src="${sessionScope.user.per_info.photo}" />
 														</span>
 
 														<div class="space space-4"></div>
@@ -666,11 +666,16 @@
 
 													<div class="col-xs-12 col-sm-9">
 														<h4 class="blue">
-															<span class="middle">王小胖</span>
+															<span class="middle">${sessionScope.user.per_info.userName}</span>
 
 															<span class="label label-purple arrowed-in-right">
 																<i class="icon-circle smaller-80 align-middle"></i>
-																在线
+																<c:if test="${sessionScope.user.per_info.online==1}">
+																	在线
+																</c:if>
+																<c:if test="${sessionScope.user.per_info.online==0}">
+																	离线
+																</c:if>
 															</span>
 														</h4>
 
@@ -679,7 +684,7 @@
 																<div class="profile-info-name"> 用户名 </div>
 
 																<div class="profile-info-value">
-																	<span>alexdoe</span>
+																	<span>${sessionScope.user.user_Name}</span>
 																</div>
 															</div>
 
@@ -688,7 +693,7 @@
 
 																<div class="profile-info-value">
 																	<i class="icon-map-marker light-orange bigger-110"></i>
-																	<span>广州市白云区</span>
+																	<span>${sessionScope.user.per_info.address}</span>
 																	<span>云霄路88号</span>
 																</div>
 															</div>
@@ -697,7 +702,7 @@
 																<div class="profile-info-name"> 年龄 </div>
 
 																<div class="profile-info-value">
-																	<span>38</span>
+																	<span>${sessionScope.user.per_info.userAge}</span>
 																</div>
 															</div>
 
@@ -705,7 +710,7 @@
 																<div class="profile-info-name"> 加入公司时间 </div>
 
 																<div class="profile-info-value">
-																	<span>20/06/2010</span>
+																	<span>${sessionScope.user.per_info.joinTime}</span>
 																</div>
 															</div>
 														</div>
@@ -739,7 +744,7 @@
 															<div class="widget-body">
 																<div class="widget-main">
 																	<p>
-																		我是一 名本科毕业生，毕业刚半年，学的是英语专业，大学毕业后一直从事翻译员一职。一直以来都很想从事教育工作，但因为一些特殊的原因一直未去考取教师资格证， 这段时间才开始准备考取此证书。不过，我认为，一个人的能力并非完全是由一纸证书来权衡的；同时，暂时还未取得教师资格证并不能说明以后不会有。我忠诚地 希望贵单位能够给我一次任职的机会，让我能够在教育行业中干出一番事业！
+																		${sessionScope.user.per_info.introduce}
 																	</p>
 
 																</div>
@@ -843,7 +848,7 @@
 														<div class="inline position-relative">
 															<div class="user">
 																<a href="#">
-																	<img src="${path}/avatars/avatar4.png" alt="Bob Doe's avatar" />
+																	<img src="${friends[0].photo}" alt="Bob Doe's avatar" />
 																</a>
 															</div>
 
@@ -851,7 +856,7 @@
 																<div class="name">
 																	<a href="#">
 																		<span class="user-status status-online"></span>
-																		Bob Doe
+																		${friends[0].userName}
 																	</a>
 																</div>
 															</div>
