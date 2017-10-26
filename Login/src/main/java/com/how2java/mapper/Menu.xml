@@ -4,21 +4,22 @@
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.how2java.mapper.MenuMapper">
-	<cache eviction="FIFO" flushInterval="60000" size="10240" readOnly="true" />
-	<resultMap id="MenuResultMap" type="com.how2java.pojo.Menu">  
-        <id column="menuId" property="menuId" jdbcType="INTEGER"/>  
-        <id column="lv" property="lv" jdbcType="INTEGER"/>
-        <result column="LevelMenuId" property="levelMenuId" jdbcType="INTEGER"/>  
-        <result column="menuName" property="menuName" jdbcType="VARCHAR"/>
-        <result column="menuClass" property="menuClass" jdbcType="VARCHAR"/>
-        <result column="menuUrl" property="menuUrl" jdbcType="VARCHAR"/>
-    </resultMap>
-    <sql id="Menu_Column_List">  
-      menuId, lv, LevelMenuId, menuName, menuClass, menuUrl
-    </sql>
-    <select id="Menu" resultMap="MenuResultMap">  
-        select  
-        <include refid="Menu_Column_List"/>  
-        from menu
-    </select>
+	<cache eviction="FIFO" flushInterval="60000" size="10240"
+		readOnly="true" />
+	<resultMap id="MenuResultMap" type="com.how2java.pojo.Menu">
+		<id column="menuId" property="menuId" jdbcType="INTEGER" />
+		<id column="lv" property="lv" jdbcType="INTEGER" />
+		<result column="LevelMenuId" property="levelMenuId" jdbcType="INTEGER" />
+		<result column="menuName" property="menuName" jdbcType="VARCHAR" />
+		<result column="menuClass" property="menuClass" jdbcType="VARCHAR" />
+		<result column="menuUrl" property="menuUrl" jdbcType="VARCHAR" />
+	</resultMap>
+	<sql id="Menu_Column_List">
+		menuId, lv, LevelMenuId, menuName, menuClass, menuUrl
+	</sql>
+	<select id="Menu" resultMap="MenuResultMap">
+		select
+		<include refid="Menu_Column_List" />
+		from menu
+	</select>
 </mapper>

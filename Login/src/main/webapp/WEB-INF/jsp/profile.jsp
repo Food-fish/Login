@@ -1,207 +1,166 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<c:set value="${pageContext.request.contextPath}" var="path" scope="page"/>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>用户信息 - 统一开发平台 - UI库</title>
-	<meta name="description" content="Restyling jQuery UI Widgets and Elements" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-	<link rel="stylesheet" href="${path}/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="${path}/css/font-awesome.min.css" />
-	<link rel="stylesheet" href="${path}/css/ace-fonts.css" />
-	<link rel="stylesheet" href="${path}/css/ace.min.css" id="main-ace-style" />
-	<!--[if lte IE 9]>
+<c:set value="${pageContext.request.contextPath}" var="path"
+	scope="page" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>用户信息 - 统一开发平台 - UI库</title>
+<meta name="description"
+	content="Restyling jQuery UI Widgets and Elements" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<link rel="stylesheet" href="${path}/css/bootstrap.min.css" />
+<link rel="stylesheet" href="${path}/css/font-awesome.min.css" />
+<link rel="stylesheet" href="${path}/css/ace-fonts.css" />
+<link rel="stylesheet" href="${path}/css/ace.min.css"
+	id="main-ace-style" />
+<!--[if lte IE 9]>
 		<link rel="stylesheet" href="${path}/css/ace-part2.min.css" />
 	<![endif]-->
-	<!--[if lte IE 9]>
+<!--[if lte IE 9]>
 	  <link rel="stylesheet" href="${path}/css/ace-ie.min.css" />
 	<![endif]-->
-	<script src="${path}/js/ace-extra.min.js"></script>
+<script src="${path}/js/ace-extra.min.js"></script>
 </head>
 <body class="no-skin">
 	<!-- #section:basics/navbar.layout -->
 	<div id="navbar" class="navbar navbar-default">
 
 		<div class="navbar-container" id="navbar-container">
-			<button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler">
-				<span class="icon-bar"></span>
-
-				<span class="icon-bar"></span>
-
-				<span class="icon-bar"></span>
+			<button type="button" class="navbar-toggle menu-toggler pull-left"
+				id="menu-toggler">
+				<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+					class="icon-bar"></span>
 			</button>
 
 			<div class="navbar-header pull-left">
 				<!-- #section:basics/navbar.layout.brand -->
-				<a href="index.html" class="navbar-brand">
-					<small>
-						<img src="${path}/avatars/logo.png" alt="" />
-					</small>
+				<a href="index.html" class="navbar-brand"> <small> <img
+						src="${path}/avatars/logo.png" alt="" />
+				</small>
 				</a>
 			</div>
 
 			<!-- #section:basics/navbar.dropdown -->
-			<div class="navbar-buttons navbar-header pull-right" role="navigation">
+			<div class="navbar-buttons navbar-header pull-right"
+				role="navigation">
 				<ul class="nav ace-nav">
 
-					<li class="green">
-						<a data-toggle="dropdown" class="dropdown-toggle" href="#">
-							<i class="ace-icon fa fa-envelope icon-animated-vertical"></i>
-							<span class="badge badge-success">5</span>
-						</a>
+					<li class="green"><a data-toggle="dropdown"
+						class="dropdown-toggle" href="#"> <i
+							class="ace-icon fa fa-envelope icon-animated-vertical"></i> <span
+							class="badge badge-success">5</span>
+					</a>
 
-						<ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
-							<li class="dropdown-header">
-								<i class="ace-icon fa fa-envelope-o"></i>
-								13条未读信息
-							</li>
+						<ul
+							class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+							<li class="dropdown-header"><i
+								class="ace-icon fa fa-envelope-o"></i> 13条未读信息</li>
 
 							<li class="dropdown-content">
 								<ul class="dropdown-menu dropdown-navbar">
-									<li>
-										<a href="#">
-											<img src="${path}/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
-											<span class="msg-body">
-												<span class="msg-title">
-													<span class="blue">B2C:</span>
-													系统产生20个错误，12个警告...
-												</span>
-
-												<span class="msg-time">
-													<i class="ace-icon fa fa-clock-o"></i>
-													<span>2014-12-15 18:00:00</span>
-												</span>
+									<li><a href="#"> <img src="${path}/avatars/avatar.png"
+											class="msg-photo" alt="Alex's Avatar" /> <span
+											class="msg-body"> <span class="msg-title"> <span
+													class="blue">B2C:</span> 系统产生20个错误，12个警告...
+											</span> <span class="msg-time"> <i
+													class="ace-icon fa fa-clock-o"></i> <span>2014-12-15
+														18:00:00</span>
 											</span>
-										</a>
-									</li>
+										</span>
+									</a></li>
 
-									<li>
-										<a href="#">
-											<img src="${path}/avatars/avatar3.png" class="msg-photo" alt="Susan's Avatar" />
-											<span class="msg-body">
-												<span class="msg-title">
-													<span class="blue">积分商城:</span>
+									<li><a href="#"> <img
+											src="${path}/avatars/avatar3.png" class="msg-photo"
+											alt="Susan's Avatar" /> <span class="msg-body"> <span
+												class="msg-title"> <span class="blue">积分商城:</span>
 													系统产生20个错误，12个警告...
-												</span>
-
-												<span class="msg-time">
-													<i class="ace-icon fa fa-clock-o"></i>
-													<span>2014-12-15 18:00:00</span>
-												</span>
+											</span> <span class="msg-time"> <i
+													class="ace-icon fa fa-clock-o"></i> <span>2014-12-15
+														18:00:00</span>
 											</span>
-										</a>
-									</li>
+										</span>
+									</a></li>
 
-									<li>
-										<a href="#">
-											<img src="${path}/avatars/avatar4.png" class="msg-photo" alt="Bob's Avatar" />
-											<span class="msg-body">
-												<span class="msg-title">
-													<span class="blue">政府机票采购:</span>
+									<li><a href="#"> <img
+											src="${path}/avatars/avatar4.png" class="msg-photo"
+											alt="Bob's Avatar" /> <span class="msg-body"> <span
+												class="msg-title"> <span class="blue">政府机票采购:</span>
 													系统产生20个错误，12个警告...
-												</span>
-
-												<span class="msg-time">
-													<i class="ace-icon fa fa-clock-o"></i>
-													<span>2014-12-15 18:00:00</span>
-												</span>
+											</span> <span class="msg-time"> <i
+													class="ace-icon fa fa-clock-o"></i> <span>2014-12-15
+														18:00:00</span>
 											</span>
-										</a>
-									</li>
+										</span>
+									</a></li>
 
-									<li>
-										<a href="#">
-											<img src="${path}/avatars/avatar2.png" class="msg-photo" alt="Kate's Avatar" />
-											<span class="msg-body">
-												<span class="msg-title">
-													<span class="blue">B2B:</span>
+									<li><a href="#"> <img
+											src="${path}/avatars/avatar2.png" class="msg-photo"
+											alt="Kate's Avatar" /> <span class="msg-body"> <span
+												class="msg-title"> <span class="blue">B2B:</span>
 													系统产生20个错误，12个警告...
-												</span>
-
-												<span class="msg-time">
-													<i class="ace-icon fa fa-clock-o"></i>
-													<span>2014-12-15 18:00:00</span>
-												</span>
+											</span> <span class="msg-time"> <i
+													class="ace-icon fa fa-clock-o"></i> <span>2014-12-15
+														18:00:00</span>
 											</span>
-										</a>
-									</li>
+										</span>
+									</a></li>
 
-									<li>
-										<a href="#">
-											<img src="${path}/avatars/avatar5.png" class="msg-photo" alt="Fred's Avatar" />
-											<span class="msg-body">
-												<span class="msg-title">
-													<span class="blue">货运系统:</span>
+									<li><a href="#"> <img
+											src="${path}/avatars/avatar5.png" class="msg-photo"
+											alt="Fred's Avatar" /> <span class="msg-body"> <span
+												class="msg-title"> <span class="blue">货运系统:</span>
 													系统产生20个错误，12个警告...
-												</span>
-
-												<span class="msg-time">
-													<i class="ace-icon fa fa-clock-o"></i>
-													<span>2014-12-15 18:00:00</span>
-												</span>
+											</span> <span class="msg-time"> <i
+													class="ace-icon fa fa-clock-o"></i> <span>2014-12-15
+														18:00:00</span>
 											</span>
-										</a>
-									</li>
+										</span>
+									</a></li>
 								</ul>
 							</li>
 
-							<li class="dropdown-footer">
-								<a href="inbox.html">
-									查看全部消息
+							<li class="dropdown-footer"><a href="inbox.html"> 查看全部消息
 									<i class="ace-icon fa fa-arrow-right"></i>
-								</a>
-							</li>
-						</ul>
-					</li>
+							</a></li>
+						</ul></li>
 
 					<!-- #section:basics/navbar.user_menu -->
-					<li class="light-blue">
-						<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-							<img class="nav-user-photo" src="${sessionScope.user.per_info.photo}" alt="Jason's Photo" />
-							<span class="user-info">
-								欢迎您<br />
+					<li class="light-blue"><a data-toggle="dropdown" href="#"
+						class="dropdown-toggle"> <img class="nav-user-photo"
+							src="${sessionScope.user.per_info.photo}" alt="Jason's Photo" />
+							<span class="user-info"> 欢迎您<br />
 								${sessionScope.user.per_info.userName}
-							</span>
+						</span> <i class="ace-icon fa fa-caret-down"></i>
+					</a>
 
-							<i class="ace-icon fa fa-caret-down"></i>
-						</a>
+						<ul
+							class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+							<li><a href="#"> <i class="ace-icon fa fa-cog"></i> 系统设置
+							</a></li>
 
-						<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
-							<li>
-								<a href="#">
-									<i class="ace-icon fa fa-cog"></i>
-									系统设置
-								</a>
-							</li>
-
-							<li>
-								<a href="profile.html">
-									<i class="ace-icon fa fa-user"></i>
-									个人信息设置
-								</a>
-							</li>
+							<li><a href="profile.html"> <i
+									class="ace-icon fa fa-user"></i> 个人信息设置
+							</a></li>
 
 							<li class="divider"></li>
 
-							<li>
-								<a href="#">
-									<i class="ace-icon fa fa-power-off"></i>
+							<li><a href="#"> <i class="ace-icon fa fa-power-off"></i>
 									登出
-								</a>
-							</li>
-						</ul>
-					</li>
+							</a></li>
+						</ul></li>
 
 					<!-- /section:basics/navbar.user_menu -->
 				</ul>
 			</div>
 
 			<!-- /section:basics/navbar.dropdown -->
-		</div><!-- /.navbar-container -->
+		</div>
+		<!-- /.navbar-container -->
 	</div>
 
 	<!-- /section:basics/navbar.layout -->
@@ -210,380 +169,189 @@
 		<!-- #section:basics/sidebar -->
 		<div id="sidebar" class="sidebar responsive">
 			<ul class="nav nav-list">
-				<li class="active">
-					<a href="index.html">
-						<i class="menu-icon fa fa-tachometer"></i>
-						<span class="menu-text"> 总控制台 </span>
-					</a>
+				<li class="active"><a href="index.html"> <i
+						class="menu-icon fa fa-tachometer"></i> <span class="menu-text">
+							总控制台 </span>
+				</a> <b class="arrow"></b></li>
 
-					<b class="arrow"></b>
-				</li>
-
-				<li class="">
-					<a href="#" class="dropdown-toggle">
-						<i class="menu-icon fa fa-desktop"></i>
-						<span class="menu-text"> UI &amp; 元素 </span>
-
-						<b class="arrow fa fa-angle-down"></b>
-					</a>
-
-					<b class="arrow"></b>
+				<li class=""><a href="#" class="dropdown-toggle"> <i
+						class="menu-icon fa fa-desktop"></i> <span class="menu-text">
+							UI &amp; 元素 </span> <b class="arrow fa fa-angle-down"></b>
+				</a> <b class="arrow"></b>
 
 					<ul class="submenu">
-						
-						<li class="">
-							<a href="typography.html">
-								<i class="menu-icon fa fa-caret-right"></i>
-								排版
-							</a>
 
-							<b class="arrow"></b>
-						</li>
+						<li class=""><a href="typography.html"> <i
+								class="menu-icon fa fa-caret-right"></i> 排版
+						</a> <b class="arrow"></b></li>
 
-						<li class="">
-							<a href="elements.html">
-								<i class="menu-icon fa fa-caret-right"></i>
-								UI元素
-							</a>
+						<li class=""><a href="elements.html"> <i
+								class="menu-icon fa fa-caret-right"></i> UI元素
+						</a> <b class="arrow"></b></li>
 
-							<b class="arrow"></b>
-						</li>
+						<li class=""><a href="buttons.html"> <i
+								class="menu-icon fa fa-caret-right"></i> 按钮 &amp; 图标
+						</a> <b class="arrow"></b></li>
 
-						<li class="">
-							<a href="buttons.html">
-								<i class="menu-icon fa fa-caret-right"></i>
-								按钮 &amp; 图标
-							</a>
+						<li class=""><a href="treeview.html"> <i
+								class="menu-icon fa fa-caret-right"></i> 树状结构
+						</a> <b class="arrow"></b></li>
 
-							<b class="arrow"></b>
-						</li>
+						<li class=""><a href="jquery-ui.html"> <i
+								class="menu-icon fa fa-caret-right"></i> jQuery UI
+						</a> <b class="arrow"></b></li>
 
-						<li class="">
-							<a href="treeview.html">
-								<i class="menu-icon fa fa-caret-right"></i>
-								树状结构
-							</a>
+						<li class=""><a href="nestable-list.html"> <i
+								class="menu-icon fa fa-caret-right"></i> 可拖拽列表
+						</a> <b class="arrow"></b></li>
 
-							<b class="arrow"></b>
-						</li>
-
-						<li class="">
-							<a href="jquery-ui.html">
-								<i class="menu-icon fa fa-caret-right"></i>
-								jQuery UI
-							</a>
-
-							<b class="arrow"></b>
-						</li>
-
-						<li class="">
-							<a href="nestable-list.html">
-								<i class="menu-icon fa fa-caret-right"></i>
-								可拖拽列表
-							</a>
-
-							<b class="arrow"></b>
-						</li>
-
-						<li class="">
-							<a href="#" class="dropdown-toggle">
-								<i class="menu-icon fa fa-caret-right"></i>
-								三级菜单
-								<b class="arrow fa fa-angle-down"></b>
-							</a>
-
-							<b class="arrow"></b>
+						<li class=""><a href="#" class="dropdown-toggle"> <i
+								class="menu-icon fa fa-caret-right"></i> 三级菜单 <b
+								class="arrow fa fa-angle-down"></b>
+						</a> <b class="arrow"></b>
 
 							<ul class="submenu">
-								<li class="">
-									<a href="#">
-										<i class="menu-icon fa fa-leaf green"></i>
-										第一级
-									</a>
+								<li class=""><a href="#"> <i
+										class="menu-icon fa fa-leaf green"></i> 第一级
+								</a> <b class="arrow"></b></li>
 
-									<b class="arrow"></b>
-								</li>
-
-								<li class="">
-									<a href="#" class="dropdown-toggle">
-										<i class="menu-icon fa fa-pencil orange"></i>
-
-										第四级
-										<b class="arrow fa fa-angle-down"></b>
-									</a>
-
-									<b class="arrow"></b>
+								<li class=""><a href="#" class="dropdown-toggle"> <i
+										class="menu-icon fa fa-pencil orange"></i> 第四级 <b
+										class="arrow fa fa-angle-down"></b>
+								</a> <b class="arrow"></b>
 
 									<ul class="submenu">
-										<li class="">
-											<a href="#">
-												<i class="menu-icon fa fa-plus purple"></i>
-												添加商品
-											</a>
+										<li class=""><a href="#"> <i
+												class="menu-icon fa fa-plus purple"></i> 添加商品
+										</a> <b class="arrow"></b></li>
 
-											<b class="arrow"></b>
-										</li>
+										<li class=""><a href="javascript:void(0)"> <i
+												class="menu-icon fa fa-eye pink"></i> 查看商品
+										</a> <b class="arrow"></b></li>
+									</ul></li>
+							</ul></li>
+					</ul></li>
 
-										<li class="">
-											<a href="javascript:void(0)">
-												<i class="menu-icon fa fa-eye pink"></i>
-												查看商品
-											</a>
-
-											<b class="arrow"></b>
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</li>
-
-				<li class="">
-					<a href="#" class="dropdown-toggle">
-						<i class="menu-icon fa fa-list"></i>
-						<span class="menu-text"> 表格 </span>
-
-						<b class="arrow fa fa-angle-down"></b>
-					</a>
-
-					<b class="arrow"></b>
+				<li class=""><a href="#" class="dropdown-toggle"> <i
+						class="menu-icon fa fa-list"></i> <span class="menu-text">
+							表格 </span> <b class="arrow fa fa-angle-down"></b>
+				</a> <b class="arrow"></b>
 
 					<ul class="submenu">
-						<li class="">
-							<a href="tables.html">
-								<i class="menu-icon fa fa-caret-right"></i>
-								简单通用表格
-							</a>
+						<li class=""><a href="tables.html"> <i
+								class="menu-icon fa fa-caret-right"></i> 简单通用表格
+						</a> <b class="arrow"></b></li>
 
-							<b class="arrow"></b>
-						</li>
+						<li class=""><a href="jqgrid.html"> <i
+								class="menu-icon fa fa-caret-right"></i> jqGrid插件表格
+						</a> <b class="arrow"></b></li>
+					</ul></li>
 
-						<li class="">
-							<a href="jqgrid.html">
-								<i class="menu-icon fa fa-caret-right"></i>
-								jqGrid插件表格
-							</a>
-
-							<b class="arrow"></b>
-						</li>
-					</ul>
-				</li>
-
-				<li class="">
-					<a href="#" class="dropdown-toggle">
-						<i class="menu-icon fa fa-pencil-square-o"></i>
-						<span class="menu-text"> 表单 </span>
-
-						<b class="arrow fa fa-angle-down"></b>
-					</a>
-
-					<b class="arrow"></b>
+				<li class=""><a href="#" class="dropdown-toggle"> <i
+						class="menu-icon fa fa-pencil-square-o"></i> <span
+						class="menu-text"> 表单 </span> <b class="arrow fa fa-angle-down"></b>
+				</a> <b class="arrow"></b>
 
 					<ul class="submenu">
-						<li class="">
-							<a href="form-elements.html">
-								<i class="menu-icon fa fa-caret-right"></i>
-								表单组件
-							</a>
+						<li class=""><a href="form-elements.html"> <i
+								class="menu-icon fa fa-caret-right"></i> 表单组件
+						</a> <b class="arrow"></b></li>
 
-							<b class="arrow"></b>
-						</li>
+						<li class=""><a href="form-wizard.html"> <i
+								class="menu-icon fa fa-caret-right"></i> 向导提示 &amp; 验证
+						</a> <b class="arrow"></b></li>
 
-						<li class="">
-							<a href="form-wizard.html">
-								<i class="menu-icon fa fa-caret-right"></i>
-								向导提示 &amp; 验证
-							</a>
+						<li class=""><a href="wysiwyg.html"> <i
+								class="menu-icon fa fa-caret-right"></i> 编辑器
+						</a> <b class="arrow"></b></li>
 
-							<b class="arrow"></b>
-						</li>
+						<li class=""><a href="dropzone.html"> <i
+								class="menu-icon fa fa-caret-right"></i> 文件上传
+						</a> <b class="arrow"></b></li>
+					</ul></li>
 
-						<li class="">
-							<a href="wysiwyg.html">
-								<i class="menu-icon fa fa-caret-right"></i>
-								编辑器
-							</a>
+				<li class=""><a href="widgets.html"> <i
+						class="menu-icon fa fa-list-alt"></i> <span class="menu-text">
+							插件 </span>
+				</a> <b class="arrow"></b></li>
 
-							<b class="arrow"></b>
-						</li>
-
-						<li class="">
-							<a href="dropzone.html">
-								<i class="menu-icon fa fa-caret-right"></i>
-								文件上传
-							</a>
-
-							<b class="arrow"></b>
-						</li>
-					</ul>
-				</li>
-
-				<li class="">
-					<a href="widgets.html">
-						<i class="menu-icon fa fa-list-alt"></i>
-						<span class="menu-text"> 插件 </span>
-					</a>
-
-					<b class="arrow"></b>
-				</li>
-
-				<li class="">
-					<a href="calendar.html">
-						<i class="menu-icon fa fa-calendar"></i>
-
-						<span class="menu-text">
-							日历
-
-							<!-- #section:basics/sidebar.layout.badge -->
-							<span class="badge badge-transparent tooltip-error" title="有2件重要事件">
+				<li class=""><a href="calendar.html"> <i
+						class="menu-icon fa fa-calendar"></i> <span class="menu-text">
+							日历 <!-- #section:basics/sidebar.layout.badge --> <span
+							class="badge badge-transparent tooltip-error" title="有2件重要事件">
 								<i class="ace-icon fa fa-exclamation-triangle red bigger-130"></i>
-							</span>
+						</span> <!-- /section:basics/sidebar.layout.badge -->
+					</span>
+				</a> <b class="arrow"></b></li>
 
-							<!-- /section:basics/sidebar.layout.badge -->
-						</span>
-					</a>
+				<li class=""><a href="gallery.html"> <i
+						class="menu-icon fa fa-picture-o"></i> <span class="menu-text">
+							相册 </span>
+				</a> <b class="arrow"></b></li>
 
-					<b class="arrow"></b>
-				</li>
-
-				<li class="">
-					<a href="gallery.html">
-						<i class="menu-icon fa fa-picture-o"></i>
-						<span class="menu-text"> 相册 </span>
-					</a>
-
-					<b class="arrow"></b>
-				</li>
-
-				<li class="active open">
-					<a href="#" class="dropdown-toggle">
-						<i class="menu-icon fa fa-tag"></i>
-						<span class="menu-text"> 更多页面 </span>
-
-						<b class="arrow fa fa-angle-down"></b>
-					</a>
-
-					<b class="arrow"></b>
+				<li class="active open"><a href="#" class="dropdown-toggle">
+						<i class="menu-icon fa fa-tag"></i> <span class="menu-text">
+							更多页面 </span> <b class="arrow fa fa-angle-down"></b>
+				</a> <b class="arrow"></b>
 
 					<ul class="submenu">
-						<li class="active">
-							<a href="profile.html">
-								<i class="menu-icon fa fa-caret-right"></i>
-								用户信息
-							</a>
+						<li class="active"><a href="profile.html"> <i
+								class="menu-icon fa fa-caret-right"></i> 用户信息
+						</a> <b class="arrow"></b></li>
 
-							<b class="arrow"></b>
-						</li>
+						<li class=""><a href="pricing.html"> <i
+								class="menu-icon fa fa-caret-right"></i> 售价单
+						</a> <b class="arrow"></b></li>
 
-						<li class="">
-							<a href="pricing.html">
-								<i class="menu-icon fa fa-caret-right"></i>
-								售价单
-							</a>
+						<li class=""><a href="invoice.html"> <i
+								class="menu-icon fa fa-caret-right"></i> 购物车
+						</a> <b class="arrow"></b></li>
 
-							<b class="arrow"></b>
-						</li>
+						<li class=""><a href="timeline.html"> <i
+								class="menu-icon fa fa-caret-right"></i> 时间轴
+						</a> <b class="arrow"></b></li>
 
-						<li class="">
-							<a href="invoice.html">
-								<i class="menu-icon fa fa-caret-right"></i>
-								购物车
-							</a>
+						<li class=""><a href="login.html"> <i
+								class="menu-icon fa fa-caret-right"></i> 登录注册
+						</a> <b class="arrow"></b></li>
+					</ul></li>
 
-							<b class="arrow"></b>
-						</li>
-
-						<li class="">
-							<a href="timeline.html">
-								<i class="menu-icon fa fa-caret-right"></i>
-								时间轴
-							</a>
-
-							<b class="arrow"></b>
-						</li>
-
-						<li class="">
-							<a href="login.html">
-								<i class="menu-icon fa fa-caret-right"></i>
-								登录注册
-							</a>
-
-							<b class="arrow"></b>
-						</li>
-					</ul>
-				</li>
-
-				<li class="">
-					<a href="#" class="dropdown-toggle">
-						<i class="menu-icon fa fa-file-o"></i>
-
-						<span class="menu-text">
-							其他页面
-
-							<!-- #section:basics/sidebar.layout.badge -->
-							<span class="badge badge-primary">5</span>
-
-							<!-- /section:basics/sidebar.layout.badge -->
-						</span>
-
-						<b class="arrow fa fa-angle-down"></b>
-					</a>
-
-					<b class="arrow"></b>
+				<li class=""><a href="#" class="dropdown-toggle"> <i
+						class="menu-icon fa fa-file-o"></i> <span class="menu-text">
+							其他页面 <!-- #section:basics/sidebar.layout.badge --> <span
+							class="badge badge-primary">5</span> <!-- /section:basics/sidebar.layout.badge -->
+					</span> <b class="arrow fa fa-angle-down"></b>
+				</a> <b class="arrow"></b>
 
 					<ul class="submenu">
-						<li class="">
-							<a href="faq.html">
-								<i class="menu-icon fa fa-caret-right"></i>
-								帮助页面
-							</a>
+						<li class=""><a href="faq.html"> <i
+								class="menu-icon fa fa-caret-right"></i> 帮助页面
+						</a> <b class="arrow"></b></li>
 
-							<b class="arrow"></b>
-						</li>
+						<li class=""><a href="error-404.html"> <i
+								class="menu-icon fa fa-caret-right"></i> 404错误页面
+						</a> <b class="arrow"></b></li>
 
-						<li class="">
-							<a href="error-404.html">
-								<i class="menu-icon fa fa-caret-right"></i>
-								404错误页面
-							</a>
+						<li class=""><a href="error-500.html"> <i
+								class="menu-icon fa fa-caret-right"></i> 500错误页面
+						</a> <b class="arrow"></b></li>
 
-							<b class="arrow"></b>
-						</li>
+						<li class=""><a href="grid.html"> <i
+								class="menu-icon fa fa-caret-right"></i> 网格
+						</a> <b class="arrow"></b></li>
 
-						<li class="">
-							<a href="error-500.html">
-								<i class="menu-icon fa fa-caret-right"></i>
-								500错误页面
-							</a>
-
-							<b class="arrow"></b>
-						</li>
-
-						<li class="">
-							<a href="grid.html">
-								<i class="menu-icon fa fa-caret-right"></i>
-								网格
-							</a>
-
-							<b class="arrow"></b>
-						</li>
-
-						<li class="">
-							<a href="blank.html">
-								<i class="menu-icon fa fa-caret-right"></i>
-								空白页面
-							</a>
-
-							<b class="arrow"></b>
-						</li>
-					</ul>
-				</li>
-			</ul><!-- /.nav-list -->
+						<li class=""><a href="blank.html"> <i
+								class="menu-icon fa fa-caret-right"></i> 空白页面
+						</a> <b class="arrow"></b></li>
+					</ul></li>
+			</ul>
+			<!-- /.nav-list -->
 
 			<!-- #section:basics/sidebar.layout.minimize -->
 			<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
-				<i class="ace-icon fa fa-angle-double-left" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
+				<i class="ace-icon fa fa-angle-double-left"
+					data-icon1="ace-icon fa fa-angle-double-left"
+					data-icon2="ace-icon fa fa-angle-double-right"></i>
 			</div>
 
 		</div>
@@ -593,24 +361,23 @@
 			<!-- #section:basics/content.breadcrumbs -->
 			<div class="breadcrumbs" id="breadcrumbs">
 				<ul class="breadcrumb">
-					<li>
-						<i class="ace-icon fa fa-home home-icon"></i>
-						<a href="index.html">UI库首页</a>
-					</li>
-					<li>
-						<a href="javascript:void(0)">用户个人资料</a>
-					</li>
-				</ul><!-- /.breadcrumb -->
+					<li><i class="ace-icon fa fa-home home-icon"></i> <a
+						href="index.html">UI库首页</a></li>
+					<li><a href="javascript:void(0)">用户个人资料</a></li>
+				</ul>
+				<!-- /.breadcrumb -->
 
 				<!-- #section:basics/content.searchbox -->
 				<div class="nav-search" id="nav-search">
 					<form class="form-search">
-						<span class="input-icon">
-							<input type="text" placeholder="请输入关键字 ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
-							<i class="ace-icon fa fa-search nav-search-icon"></i>
+						<span class="input-icon"> <input type="text"
+							placeholder="请输入关键字 ..." class="nav-search-input"
+							id="nav-search-input" autocomplete="off" /> <i
+							class="ace-icon fa fa-search nav-search-icon"></i>
 						</span>
 					</form>
-				</div><!-- /.nav-search -->
+				</div>
+				<!-- /.nav-search -->
 			</div>
 
 
@@ -622,216 +389,208 @@
 					<div class="row">
 						<div class="col-xs-12">
 							<div id="user-profile-2" class="user-profile">
-									<div class="tabbable">
-										<ul class="nav nav-tabs padding-18">
-											<li class="active">
-												<a data-toggle="tab" href="#home">
-													<i class="green icon-user bigger-120"></i>
-													详细资料
-												</a>
-											</li>
+								<div class="tabbable">
+									<ul class="nav nav-tabs padding-18">
+										<li class="active"><a data-toggle="tab" href="#home">
+												<i class="green icon-user bigger-120"></i> 详细资料
+										</a></li>
 
 
-											<li>
-												<a data-toggle="tab" href="#friends">
-													<i class="blue icon-group bigger-120"></i>
-													联系人
-												</a>
-											</li>
+										<li><a data-toggle="tab" href="#friends"> <i
+												class="blue icon-group bigger-120"></i> 联系人
+										</a></li>
 
-											<li>
-												<a data-toggle="tab" href="#pictures">
-													<i class="pink icon-picture bigger-120"></i>
-													个人相册
-												</a>
-											</li>
-										</ul>
+										<li><a data-toggle="tab" href="#pictures"> <i
+												class="pink icon-picture bigger-120"></i> 个人相册
+										</a></li>
+									</ul>
 
-										<div class="tab-content no-border padding-24">
-											<div id="home" class="tab-pane in active">
-												<div class="row">
-													<div class="col-xs-12 col-sm-3 center">
-														<span class="profile-picture">
-															<img class="editable img-responsive" alt="Alex's Avatar" id="avatar2" src="${sessionScope.user.per_info.photo}" />
-														</span>
+									<div class="tab-content no-border padding-24">
+										<div id="home" class="tab-pane in active">
+											<div class="row">
+												<div class="col-xs-12 col-sm-3 center">
+													<span class="profile-picture"> <img
+														class="editable img-responsive" alt="Alex's Avatar"
+														id="avatar2" src="${sessionScope.user.per_info.photo}" />
+													</span>
 
-														<div class="space space-4"></div>
+													<div class="space space-4"></div>
 
 
-														<a href="#" class="btn btn-sm btn-block btn-primary">
-															<i class="icon-envelope-alt bigger-110"></i>
-															<span class="bigger-110">发送邮件</span>
-														</a>
-													</div><!-- /span -->
+													<a href="#" class="btn btn-sm btn-block btn-primary"> <i
+														class="icon-envelope-alt bigger-110"></i> <span
+														class="bigger-110">发送邮件</span>
+													</a>
+												</div>
+												<!-- /span -->
 
-													<div class="col-xs-12 col-sm-9">
-														<h4 class="blue">
-															<span class="middle">${sessionScope.user.per_info.userName}</span>
+												<div class="col-xs-12 col-sm-9">
+													<h4 class="blue">
+														<span class="middle">${sessionScope.user.per_info.userName}</span>
 
-															<span class="label label-purple arrowed-in-right">
-																<i class="icon-circle smaller-80 align-middle"></i>
-																<c:if test="${sessionScope.user.per_info.online==1}">
+														<span class="label label-purple arrowed-in-right">
+															<i class="icon-circle smaller-80 align-middle"></i> <c:if
+																test="${sessionScope.user.per_info.online==1}">
 																	在线
-																</c:if>
-																<c:if test="${sessionScope.user.per_info.online==0}">
+																</c:if> <c:if test="${sessionScope.user.per_info.online==0}">
 																	离线
 																</c:if>
-															</span>
-														</h4>
+														</span>
+													</h4>
 
-														<div class="profile-user-info">
-															<div class="profile-info-row">
-																<div class="profile-info-name"> 用户名 </div>
+													<div class="profile-user-info">
+														<div class="profile-info-row">
+															<div class="profile-info-name">用户名</div>
 
-																<div class="profile-info-value">
-																	<span>${sessionScope.user.user_Name}</span>
-																</div>
-															</div>
-
-															<div class="profile-info-row">
-																<div class="profile-info-name"> 地址 </div>
-
-																<div class="profile-info-value">
-																	<i class="icon-map-marker light-orange bigger-110"></i>
-																	<span>${sessionScope.user.per_info.address}</span>
-																	<span>云霄路88号</span>
-																</div>
-															</div>
-
-															<div class="profile-info-row">
-																<div class="profile-info-name"> 年龄 </div>
-
-																<div class="profile-info-value">
-																	<span>${sessionScope.user.per_info.userAge}</span>
-																</div>
-															</div>
-
-															<div class="profile-info-row">
-																<div class="profile-info-name"> 加入公司时间 </div>
-
-																<div class="profile-info-value">
-																	<span>${sessionScope.user.per_info.joinTime}</span>
-																</div>
+															<div class="profile-info-value">
+																<span>${sessionScope.user.user_Name}</span>
 															</div>
 														</div>
 
-														<div class="hr hr-8 dotted"></div>
+														<div class="profile-info-row">
+															<div class="profile-info-name">地址</div>
 
-														<div class="profile-user-info">
-															<div class="profile-info-row">
-																<div class="profile-info-name"> 个人网站 </div>
-
-																<div class="profile-info-value">
-																	<a href="#" target="_blank">www.csair.com</a>
-																</div>
+															<div class="profile-info-value">
+																<i class="icon-map-marker light-orange bigger-110"></i>
+																<span>${sessionScope.user.per_info.address}</span> <span>云霄路88号</span>
 															</div>
 														</div>
-													</div><!-- /span -->
-												</div><!-- /row-fluid -->
 
-												<div class="space-20"></div>
+														<div class="profile-info-row">
+															<div class="profile-info-name">年龄</div>
 
-												<div class="row">
-													<div class="col-xs-12 col-sm-6">
-														<div class="widget-box transparent">
-															<div class="widget-header widget-header-small">
-																<h4 class="smaller">
-																	<i class="icon-check bigger-110"></i>
-																	自我介绍
-																</h4>
+															<div class="profile-info-value">
+																<span>${sessionScope.user.per_info.userAge}</span>
 															</div>
+														</div>
 
-															<div class="widget-body">
-																<div class="widget-main">
-																	<p>
-																		${sessionScope.user.per_info.introduce}
-																	</p>
+														<div class="profile-info-row">
+															<div class="profile-info-name">加入公司时间</div>
 
-																</div>
+															<div class="profile-info-value">
+																<span>${sessionScope.user.per_info.joinTime}</span>
 															</div>
 														</div>
 													</div>
 
-													<div class="col-xs-12 col-sm-6">
-														<div class="widget-box transparent">
-															<div class="widget-header widget-header-small header-color-blue2">
-																<h4 class="smaller">
-																	<i class="icon-lightbulb bigger-120"></i>
-																	技能专长
-																</h4>
+													<div class="hr hr-8 dotted"></div>
+
+													<div class="profile-user-info">
+														<div class="profile-info-row">
+															<div class="profile-info-name">个人网站</div>
+
+															<div class="profile-info-value">
+																<a href="#" target="_blank">www.csair.com</a>
 															</div>
+														</div>
+													</div>
+												</div>
+												<!-- /span -->
+											</div>
+											<!-- /row-fluid -->
 
-															<div class="widget-body">
-																<div class="widget-main padding-16">
-																	<div class="clearfix">
-																		<div class="grid3 center">
-																			<div class="easy-pie-chart percentage" data-percent="45" data-color="#CA5952">
-																				<span class="percent">45</span>%
-																			</div>
+											<div class="space-20"></div>
 
-																			<div class="space-2"></div>
-																			平面设计
+											<div class="row">
+												<div class="col-xs-12 col-sm-6">
+													<div class="widget-box transparent">
+														<div class="widget-header widget-header-small">
+															<h4 class="smaller">
+																<i class="icon-check bigger-110"></i> 自我介绍
+															</h4>
+														</div>
+
+														<div class="widget-body">
+															<div class="widget-main">
+																<p>${sessionScope.user.per_info.introduce}</p>
+
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<div class="col-xs-12 col-sm-6">
+													<div class="widget-box transparent">
+														<div
+															class="widget-header widget-header-small header-color-blue2">
+															<h4 class="smaller">
+																<i class="icon-lightbulb bigger-120"></i> 技能专长
+															</h4>
+														</div>
+
+														<div class="widget-body">
+															<div class="widget-main padding-16">
+																<div class="clearfix">
+																	<div class="grid3 center">
+																		<div class="easy-pie-chart percentage"
+																			data-percent="45" data-color="#CA5952">
+																			<span class="percent">45</span>%
 																		</div>
 
-																		<div class="grid3 center">
-																			<div class="center easy-pie-chart percentage" data-percent="90" data-color="#59A84B">
-																				<span class="percent">90</span>%
-																			</div>
+																		<div class="space-2"></div>
+																		平面设计
+																	</div>
 
-																			<div class="space-2"></div>
-																			HTML5 & CSS3
+																	<div class="grid3 center">
+																		<div class="center easy-pie-chart percentage"
+																			data-percent="90" data-color="#59A84B">
+																			<span class="percent">90</span>%
 																		</div>
 
-																		<div class="grid3 center">
-																			<div class="center easy-pie-chart percentage" data-percent="80" data-color="#9585BF">
-																				<span class="percent">80</span>%
-																			</div>
+																		<div class="space-2"></div>
+																		HTML5 & CSS3
+																	</div>
 
-																			<div class="space-2"></div>
-																			Javascript/jQuery
+																	<div class="grid3 center">
+																		<div class="center easy-pie-chart percentage"
+																			data-percent="80" data-color="#9585BF">
+																			<span class="percent">80</span>%
+																		</div>
+
+																		<div class="space-2"></div>
+																		Javascript/jQuery
+																	</div>
+																</div>
+
+																<div class="hr hr-16"></div>
+
+																<div class="profile-skills">
+																	<div class="progress">
+																		<div class="progress-bar" style="width: 80%">
+																			<span class="pull-left">HTML5 & CSS3</span> <span
+																				class="pull-right">80%</span>
 																		</div>
 																	</div>
 
-																	<div class="hr hr-16"></div>
-
-																	<div class="profile-skills">
-																		<div class="progress">
-																			<div class="progress-bar" style="width:80%">
-																				<span class="pull-left">HTML5 & CSS3</span>
-																				<span class="pull-right">80%</span>
-																			</div>
+																	<div class="progress">
+																		<div class="progress-bar progress-bar-success"
+																			style="width: 72%">
+																			<span class="pull-left">Javascript & jQuery</span> <span
+																				class="pull-right">72%</span>
 																		</div>
+																	</div>
 
-																		<div class="progress">
-																			<div class="progress-bar progress-bar-success" style="width:72%">
-																				<span class="pull-left">Javascript & jQuery</span>
-
-																				<span class="pull-right">72%</span>
-																			</div>
+																	<div class="progress">
+																		<div class="progress-bar progress-bar-purple"
+																			style="width: 70%">
+																			<span class="pull-left">PHP & MySQL</span> <span
+																				class="pull-right">70%</span>
 																		</div>
+																	</div>
 
-																		<div class="progress">
-																			<div class="progress-bar progress-bar-purple" style="width:70%">
-																				<span class="pull-left">PHP & MySQL</span>
-
-																				<span class="pull-right">70%</span>
-																			</div>
+																	<div class="progress">
+																		<div class="progress-bar progress-bar-warning"
+																			style="width: 50%">
+																			<span class="pull-left">Wordpress</span> <span
+																				class="pull-right">50%</span>
 																		</div>
+																	</div>
 
-																		<div class="progress">
-																			<div class="progress-bar progress-bar-warning" style="width:50%">
-																				<span class="pull-left">Wordpress</span>
-
-																				<span class="pull-right">50%</span>
-																			</div>
-																		</div>
-
-																		<div class="progress">
-																			<div class="progress-bar progress-bar-danger" style="width:35%">
-																				<span class="pull-left">Photoshop</span>
-
-																				<span class="pull-right">35%</span>
-																			</div>
+																	<div class="progress">
+																		<div class="progress-bar progress-bar-danger"
+																			style="width: 35%">
+																			<span class="pull-left">Photoshop</span> <span
+																				class="pull-right">35%</span>
 																		</div>
 																	</div>
 																</div>
@@ -839,641 +598,513 @@
 														</div>
 													</div>
 												</div>
-											</div><!-- #home -->
-
-										
-											<div id="friends" class="tab-pane">
-												<div class="profile-users clearfix">
-													<div class="itemdiv memberdiv">
-														<div class="inline position-relative">
-															<div class="user">
-																<a href="#">
-																	<img src="${friends[0].photo}" alt="Bob Doe's avatar" />
-																</a>
-															</div>
-
-															<div class="body">
-																<div class="name">
-																	<a href="#">
-																		<span class="user-status status-online"></span>
-																		${friends[0].userName}
-																	</a>
-																</div>
-															</div>
-
-															<div class="popover">
-																<div class="arrow"></div>
-
-																<div class="popover-content">
-																	<div class="bolder">Content Editor</div>
-
-																	<div class="time">
-																		<i class="icon-time middle bigger-120 orange"></i>
-																		<span class="green"> 20 mins ago </span>
-																	</div>
-
-																	<div class="hr dotted hr-8"></div>
-
-																	<div class="tools action-buttons">
-																		<a href="#">
-																			<i class="icon-facebook-sign blue bigger-150"></i>
-																		</a>
-
-																		<a href="#">
-																			<i class="icon-twitter-sign light-blue bigger-150"></i>
-																		</a>
-
-																		<a href="#">
-																			<i class="icon-google-plus-sign red bigger-150"></i>
-																		</a>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-
-													<div class="itemdiv memberdiv">
-														<div class="inline position-relative">
-															<div class="user">
-																<a href="#">
-																	<img src="${path}/avatars/avatar1.png" alt="Rose Doe's avatar" />
-																</a>
-															</div>
-
-															<div class="body">
-																<div class="name">
-																	<a href="#">
-																		<span class="user-status status-offline"></span>
-																		Rose Doe
-																	</a>
-																</div>
-															</div>
-
-															<div class="popover">
-																<div class="arrow"></div>
-
-																<div class="popover-content">
-																	<div class="bolder">Graphic Designer</div>
-
-																	<div class="time">
-																		<i class="icon-time middle bigger-120 grey"></i>
-																		<span class="grey"> 30 min ago </span>
-																	</div>
-
-																	<div class="hr dotted hr-8"></div>
-
-																	<div class="tools action-buttons">
-																		<a href="#">
-																			<i class="icon-facebook-sign blue bigger-150"></i>
-																		</a>
-
-																		<a href="#">
-																			<i class="icon-twitter-sign light-blue bigger-150"></i>
-																		</a>
-
-																		<a href="#">
-																			<i class="icon-google-plus-sign red bigger-150"></i>
-																		</a>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-
-													<div class="itemdiv memberdiv">
-														<div class="inline position-relative">
-															<div class="user">
-																<a href="#">
-																	<img src="${path}/avatars/avatar.png" alt="Jim Doe's avatar" />
-																</a>
-															</div>
-
-															<div class="body">
-																<div class="name">
-																	<a href="#">
-																		<span class="user-status status-busy"></span>
-																		Jim Doe
-																	</a>
-																</div>
-															</div>
-
-															<div class="popover">
-																<div class="arrow"></div>
-
-																<div class="popover-content">
-																	<div class="bolder">SEO &amp; Advertising</div>
-
-																	<div class="time">
-																		<i class="icon-time middle bigger-120 red"></i>
-																		<span class="grey"> 1 hour ago </span>
-																	</div>
-
-																	<div class="hr dotted hr-8"></div>
-
-																	<div class="tools action-buttons">
-																		<a href="#">
-																			<i class="icon-facebook-sign blue bigger-150"></i>
-																		</a>
-
-																		<a href="#">
-																			<i class="icon-twitter-sign light-blue bigger-150"></i>
-																		</a>
-
-																		<a href="#">
-																			<i class="icon-google-plus-sign red bigger-150"></i>
-																		</a>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-
-													<div class="itemdiv memberdiv">
-														<div class="inline position-relative">
-															<div class="user">
-																<a href="#">
-																	<img src="${path}/avatars/avatar5.png" alt="Alex Doe's avatar" />
-																</a>
-															</div>
-
-															<div class="body">
-																<div class="name">
-																	<a href="#">
-																		<span class="user-status status-idle"></span>
-																		Alex Doe
-																	</a>
-																</div>
-															</div>
-
-															<div class="popover">
-																<div class="arrow"></div>
-
-																<div class="popover-content">
-																	<div class="bolder">Marketing</div>
-
-																	<div class="time">
-																		<i class="icon-time middle bigger-120 orange"></i>
-																		<span class=""> 40 minutes idle </span>
-																	</div>
-
-																	<div class="hr dotted hr-8"></div>
-
-																	<div class="tools action-buttons">
-																		<a href="#">
-																			<i class="icon-facebook-sign blue bigger-150"></i>
-																		</a>
-
-																		<a href="#">
-																			<i class="icon-twitter-sign light-blue bigger-150"></i>
-																		</a>
-
-																		<a href="#">
-																			<i class="icon-google-plus-sign red bigger-150"></i>
-																		</a>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-
-													<div class="itemdiv memberdiv">
-														<div class="inline position-relative">
-															<div class="user">
-																<a href="#">
-																	<img src="${path}/avatars/avatar2.png" alt="Phil Doe's avatar" />
-																</a>
-															</div>
-
-															<div class="body">
-																<div class="name">
-																	<a href="#">
-																		<span class="user-status status-online"></span>
-																		Phil Doe
-																	</a>
-																</div>
-															</div>
-
-															<div class="popover">
-																<div class="arrow"></div>
-
-																<div class="popover-content">
-																	<div class="bolder">Public Relations</div>
-
-																	<div class="time">
-																		<i class="icon-time middle bigger-120 orange"></i>
-																		<span class="green"> 2 hours ago </span>
-																	</div>
-
-																	<div class="hr dotted hr-8"></div>
-
-																	<div class="tools action-buttons">
-																		<a href="#">
-																			<i class="icon-facebook-sign blue bigger-150"></i>
-																		</a>
-
-																		<a href="#">
-																			<i class="icon-twitter-sign light-blue bigger-150"></i>
-																		</a>
-
-																		<a href="#">
-																			<i class="icon-google-plus-sign red bigger-150"></i>
-																		</a>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-
-													<div class="itemdiv memberdiv">
-														<div class="inline position-relative">
-															<div class="user">
-																<a href="#">
-																	<img src="${path}/avatars/avatar3.png" alt="Susan Doe's avatar" />
-																</a>
-															</div>
-
-															<div class="body">
-																<div class="name">
-																	<a href="#">
-																		<span class="user-status status-online"></span>
-																		Susan Doe
-																	</a>
-																</div>
-															</div>
-
-															<div class="popover">
-																<div class="arrow"></div>
-
-																<div class="popover-content">
-																	<div class="bolder">HR Management</div>
-
-																	<div class="time">
-																		<i class="icon-time middle bigger-120 orange"></i>
-																		<span class="green"> 20 mins ago </span>
-																	</div>
-
-																	<div class="hr dotted hr-8"></div>
-
-																	<div class="tools action-buttons">
-																		<a href="#">
-																			<i class="icon-facebook-sign blue bigger-150"></i>
-																		</a>
-
-																		<a href="#">
-																			<i class="icon-twitter-sign light-blue bigger-150"></i>
-																		</a>
-
-																		<a href="#">
-																			<i class="icon-google-plus-sign red bigger-150"></i>
-																		</a>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-
-													<div class="itemdiv memberdiv">
-														<div class="inline position-relative">
-															<div class="user">
-																<a href="#">
-																	<img src="${path}/avatars/avatar1.png" alt="Jennifer Doe's avatar" />
-																</a>
-															</div>
-
-															<div class="body">
-																<div class="name">
-																	<a href="#">
-																		<span class="user-status status-offline"></span>
-																		Jennifer Doe
-																	</a>
-																</div>
-															</div>
-
-															<div class="popover">
-																<div class="arrow"></div>
-
-																<div class="popover-content">
-																	<div class="bolder">Graphic Designer</div>
-
-																	<div class="time">
-																		<i class="icon-time middle bigger-120 grey"></i>
-																		<span class="grey"> 2 hours ago </span>
-																	</div>
-
-																	<div class="hr dotted hr-8"></div>
-
-																	<div class="tools action-buttons">
-																		<a href="#">
-																			<i class="icon-facebook-sign blue bigger-150"></i>
-																		</a>
-
-																		<a href="#">
-																			<i class="icon-twitter-sign light-blue bigger-150"></i>
-																		</a>
-
-																		<a href="#">
-																			<i class="icon-google-plus-sign red bigger-150"></i>
-																		</a>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-
-													<div class="itemdiv memberdiv">
-														<div class="inline position-relative">
-															<div class="user">
-																<a href="#">
-																	<img src="${path}/avatars/avatar3.png" alt="Alexa Doe's avatar" />
-																</a>
-															</div>
-
-															<div class="body">
-																<div class="name">
-																	<a href="#">
-																		<span class="user-status status-offline"></span>
-																		Alexa Doe
-																	</a>
-																</div>
-															</div>
-
-															<div class="popover">
-																<div class="arrow"></div>
-
-																<div class="popover-content">
-																	<div class="bolder">Accounting</div>
-
-																	<div class="time">
-																		<i class="icon-time middle bigger-120 grey"></i>
-																		<span class="grey"> 4 hours ago </span>
-																	</div>
-
-																	<div class="hr dotted hr-8"></div>
-
-																	<div class="tools action-buttons">
-																		<a href="#">
-																			<i class="icon-facebook-sign blue bigger-150"></i>
-																		</a>
-
-																		<a href="#">
-																			<i class="icon-twitter-sign light-blue bigger-150"></i>
-																		</a>
-
-																		<a href="#">
-																			<i class="icon-google-plus-sign red bigger-150"></i>
-																		</a>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-
-												<div class="hr hr10 hr-double"></div>
-
-												<ul class="pager pull-right">
-													<li class="previous disabled">
-														<a href="#">&larr; 前一页</a>
-													</li>
-
-													<li class="next">
-														<a href="#">后一页 &rarr;</a>
-													</li>
-												</ul>
-											</div><!-- /#friends -->
-
-											<div id="pictures" class="tab-pane">
-												<ul class="ace-thumbnails">
-													<li>
-														<a href="#" data-rel="colorbox">
-															<img alt="150x150" src="${path}/images/gallery/thumb-1.jpg" />
-															<div class="text">
-																<div class="inner">Sample Caption on Hover</div>
-															</div>
-														</a>
-
-														<div class="tools tools-bottom">
-															<a href="#">
-																<i class="icon-link"></i>
-															</a>
-
-															<a href="#">
-																<i class="icon-paper-clip"></i>
-															</a>
-
-															<a href="#">
-																<i class="icon-pencil"></i>
-															</a>
-
-															<a href="#">
-																<i class="icon-remove red"></i>
-															</a>
-														</div>
-													</li>
-
-													<li>
-														<a href="#" data-rel="colorbox">
-															<img alt="150x150" src="${path}/images/gallery/thumb-2.jpg" />
-															<div class="text">
-																<div class="inner">带遮罩提示的相册例子</div>
-															</div>
-														</a>
-
-														<div class="tools tools-bottom">
-															<a href="#">
-																<i class="icon-link"></i>
-															</a>
-
-															<a href="#">
-																<i class="icon-paper-clip"></i>
-															</a>
-
-															<a href="#">
-																<i class="icon-pencil"></i>
-															</a>
-
-															<a href="#">
-																<i class="icon-remove red"></i>
-															</a>
-														</div>
-													</li>
-
-													<li>
-														<a href="#" data-rel="colorbox">
-															<img alt="150x150" src="${path}/images/gallery/thumb-3.jpg" />
-															<div class="text">
-																<div class="inner">带遮罩提示的相册例子</div>
-															</div>
-														</a>
-
-														<div class="tools tools-bottom">
-															<a href="#">
-																<i class="icon-link"></i>
-															</a>
-
-															<a href="#">
-																<i class="icon-paper-clip"></i>
-															</a>
-
-															<a href="#">
-																<i class="icon-pencil"></i>
-															</a>
-
-															<a href="#">
-																<i class="icon-remove red"></i>
-															</a>
-														</div>
-													</li>
-
-													<li>
-														<a href="#" data-rel="colorbox">
-															<img alt="150x150" src="${path}/images/gallery/thumb-4.jpg" />
-															<div class="text">
-																<div class="inner">带遮罩提示的相册例子</div>
-															</div>
-														</a>
-
-														<div class="tools tools-bottom">
-															<a href="#">
-																<i class="icon-link"></i>
-															</a>
-
-															<a href="#">
-																<i class="icon-paper-clip"></i>
-															</a>
-
-															<a href="#">
-																<i class="icon-pencil"></i>
-															</a>
-
-															<a href="#">
-																<i class="icon-remove red"></i>
-															</a>
-														</div>
-													</li>
-
-													<li>
-														<a href="#" data-rel="colorbox">
-															<img alt="150x150" src="${path}/images/gallery/thumb-5.jpg" />
-															<div class="text">
-																<div class="inner">带遮罩提示的相册例子</div>
-															</div>
-														</a>
-
-														<div class="tools tools-bottom">
-															<a href="#">
-																<i class="icon-link"></i>
-															</a>
-
-															<a href="#">
-																<i class="icon-paper-clip"></i>
-															</a>
-
-															<a href="#">
-																<i class="icon-pencil"></i>
-															</a>
-
-															<a href="#">
-																<i class="icon-remove red"></i>
-															</a>
-														</div>
-													</li>
-
-													<li>
-														<a href="#" data-rel="colorbox">
-															<img alt="150x150" src="${path}/images/gallery/thumb-6.jpg" />
-															<div class="text">
-																<div class="inner">带遮罩提示的相册例子</div>
-															</div>
-														</a>
-
-														<div class="tools tools-bottom">
-															<a href="#">
-																<i class="icon-link"></i>
-															</a>
-
-															<a href="#">
-																<i class="icon-paper-clip"></i>
-															</a>
-
-															<a href="#">
-																<i class="icon-pencil"></i>
-															</a>
-
-															<a href="#">
-																<i class="icon-remove red"></i>
-															</a>
-														</div>
-													</li>
-
-													<li>
-														<a href="#" data-rel="colorbox">
-															<img alt="150x150" src="${path}/images/gallery/thumb-1.jpg" />
-															<div class="text">
-																<div class="inner">带遮罩提示的相册例子</div>
-															</div>
-														</a>
-
-														<div class="tools tools-bottom">
-															<a href="#">
-																<i class="icon-link"></i>
-															</a>
-
-															<a href="#">
-																<i class="icon-paper-clip"></i>
-															</a>
-
-															<a href="#">
-																<i class="icon-pencil"></i>
-															</a>
-
-															<a href="#">
-																<i class="icon-remove red"></i>
-															</a>
-														</div>
-													</li>
-
-													<li>
-														<a href="#" data-rel="colorbox">
-															<img alt="150x150" src="${path}/images/gallery/thumb-2.jpg" />
-															<div class="text">
-																<div class="inner">带遮罩提示的相册例子</div>
-															</div>
-														</a>
-
-														<div class="tools tools-bottom">
-															<a href="#">
-																<i class="icon-link"></i>
-															</a>
-
-															<a href="#">
-																<i class="icon-paper-clip"></i>
-															</a>
-
-															<a href="#">
-																<i class="icon-pencil"></i>
-															</a>
-
-															<a href="#">
-																<i class="icon-remove red"></i>
-															</a>
-														</div>
-													</li>
-												</ul>
-											</div><!-- /#pictures -->
+											</div>
 										</div>
+										<!-- #home -->
+
+
+										<div id="friends" class="tab-pane">
+											<div class="profile-users clearfix">
+												<div class="itemdiv memberdiv">
+													<div class="inline position-relative">
+														<div class="user">
+															<a href="#"> <img src="${friends[0].photo}"
+																alt="Bob Doe's avatar" />
+															</a>
+														</div>
+
+														<div class="body">
+															<div class="name">
+																<a href="#"> <span class="user-status status-online"></span>
+																	${friends[0].userName}
+																</a>
+															</div>
+														</div>
+
+														<div class="popover">
+															<div class="arrow"></div>
+
+															<div class="popover-content">
+																<div class="bolder">Content Editor</div>
+
+																<div class="time">
+																	<i class="icon-time middle bigger-120 orange"></i> <span
+																		class="green"> 20 mins ago </span>
+																</div>
+
+																<div class="hr dotted hr-8"></div>
+
+																<div class="tools action-buttons">
+																	<a href="#"> <i
+																		class="icon-facebook-sign blue bigger-150"></i>
+																	</a> <a href="#"> <i
+																		class="icon-twitter-sign light-blue bigger-150"></i>
+																	</a> <a href="#"> <i
+																		class="icon-google-plus-sign red bigger-150"></i>
+																	</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<div class="itemdiv memberdiv">
+													<div class="inline position-relative">
+														<div class="user">
+															<a href="#"> <img src="${path}/avatars/avatar1.png"
+																alt="Rose Doe's avatar" />
+															</a>
+														</div>
+
+														<div class="body">
+															<div class="name">
+																<a href="#"> <span
+																	class="user-status status-offline"></span> Rose Doe
+																</a>
+															</div>
+														</div>
+
+														<div class="popover">
+															<div class="arrow"></div>
+
+															<div class="popover-content">
+																<div class="bolder">Graphic Designer</div>
+
+																<div class="time">
+																	<i class="icon-time middle bigger-120 grey"></i> <span
+																		class="grey"> 30 min ago </span>
+																</div>
+
+																<div class="hr dotted hr-8"></div>
+
+																<div class="tools action-buttons">
+																	<a href="#"> <i
+																		class="icon-facebook-sign blue bigger-150"></i>
+																	</a> <a href="#"> <i
+																		class="icon-twitter-sign light-blue bigger-150"></i>
+																	</a> <a href="#"> <i
+																		class="icon-google-plus-sign red bigger-150"></i>
+																	</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<div class="itemdiv memberdiv">
+													<div class="inline position-relative">
+														<div class="user">
+															<a href="#"> <img src="${path}/avatars/avatar.png"
+																alt="Jim Doe's avatar" />
+															</a>
+														</div>
+
+														<div class="body">
+															<div class="name">
+																<a href="#"> <span class="user-status status-busy"></span>
+																	Jim Doe
+																</a>
+															</div>
+														</div>
+
+														<div class="popover">
+															<div class="arrow"></div>
+
+															<div class="popover-content">
+																<div class="bolder">SEO &amp; Advertising</div>
+
+																<div class="time">
+																	<i class="icon-time middle bigger-120 red"></i> <span
+																		class="grey"> 1 hour ago </span>
+																</div>
+
+																<div class="hr dotted hr-8"></div>
+
+																<div class="tools action-buttons">
+																	<a href="#"> <i
+																		class="icon-facebook-sign blue bigger-150"></i>
+																	</a> <a href="#"> <i
+																		class="icon-twitter-sign light-blue bigger-150"></i>
+																	</a> <a href="#"> <i
+																		class="icon-google-plus-sign red bigger-150"></i>
+																	</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<div class="itemdiv memberdiv">
+													<div class="inline position-relative">
+														<div class="user">
+															<a href="#"> <img src="${path}/avatars/avatar5.png"
+																alt="Alex Doe's avatar" />
+															</a>
+														</div>
+
+														<div class="body">
+															<div class="name">
+																<a href="#"> <span class="user-status status-idle"></span>
+																	Alex Doe
+																</a>
+															</div>
+														</div>
+
+														<div class="popover">
+															<div class="arrow"></div>
+
+															<div class="popover-content">
+																<div class="bolder">Marketing</div>
+
+																<div class="time">
+																	<i class="icon-time middle bigger-120 orange"></i> <span
+																		class=""> 40 minutes idle </span>
+																</div>
+
+																<div class="hr dotted hr-8"></div>
+
+																<div class="tools action-buttons">
+																	<a href="#"> <i
+																		class="icon-facebook-sign blue bigger-150"></i>
+																	</a> <a href="#"> <i
+																		class="icon-twitter-sign light-blue bigger-150"></i>
+																	</a> <a href="#"> <i
+																		class="icon-google-plus-sign red bigger-150"></i>
+																	</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<div class="itemdiv memberdiv">
+													<div class="inline position-relative">
+														<div class="user">
+															<a href="#"> <img src="${path}/avatars/avatar2.png"
+																alt="Phil Doe's avatar" />
+															</a>
+														</div>
+
+														<div class="body">
+															<div class="name">
+																<a href="#"> <span class="user-status status-online"></span>
+																	Phil Doe
+																</a>
+															</div>
+														</div>
+
+														<div class="popover">
+															<div class="arrow"></div>
+
+															<div class="popover-content">
+																<div class="bolder">Public Relations</div>
+
+																<div class="time">
+																	<i class="icon-time middle bigger-120 orange"></i> <span
+																		class="green"> 2 hours ago </span>
+																</div>
+
+																<div class="hr dotted hr-8"></div>
+
+																<div class="tools action-buttons">
+																	<a href="#"> <i
+																		class="icon-facebook-sign blue bigger-150"></i>
+																	</a> <a href="#"> <i
+																		class="icon-twitter-sign light-blue bigger-150"></i>
+																	</a> <a href="#"> <i
+																		class="icon-google-plus-sign red bigger-150"></i>
+																	</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<div class="itemdiv memberdiv">
+													<div class="inline position-relative">
+														<div class="user">
+															<a href="#"> <img src="${path}/avatars/avatar3.png"
+																alt="Susan Doe's avatar" />
+															</a>
+														</div>
+
+														<div class="body">
+															<div class="name">
+																<a href="#"> <span class="user-status status-online"></span>
+																	Susan Doe
+																</a>
+															</div>
+														</div>
+
+														<div class="popover">
+															<div class="arrow"></div>
+
+															<div class="popover-content">
+																<div class="bolder">HR Management</div>
+
+																<div class="time">
+																	<i class="icon-time middle bigger-120 orange"></i> <span
+																		class="green"> 20 mins ago </span>
+																</div>
+
+																<div class="hr dotted hr-8"></div>
+
+																<div class="tools action-buttons">
+																	<a href="#"> <i
+																		class="icon-facebook-sign blue bigger-150"></i>
+																	</a> <a href="#"> <i
+																		class="icon-twitter-sign light-blue bigger-150"></i>
+																	</a> <a href="#"> <i
+																		class="icon-google-plus-sign red bigger-150"></i>
+																	</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<div class="itemdiv memberdiv">
+													<div class="inline position-relative">
+														<div class="user">
+															<a href="#"> <img src="${path}/avatars/avatar1.png"
+																alt="Jennifer Doe's avatar" />
+															</a>
+														</div>
+
+														<div class="body">
+															<div class="name">
+																<a href="#"> <span
+																	class="user-status status-offline"></span> Jennifer Doe
+																</a>
+															</div>
+														</div>
+
+														<div class="popover">
+															<div class="arrow"></div>
+
+															<div class="popover-content">
+																<div class="bolder">Graphic Designer</div>
+
+																<div class="time">
+																	<i class="icon-time middle bigger-120 grey"></i> <span
+																		class="grey"> 2 hours ago </span>
+																</div>
+
+																<div class="hr dotted hr-8"></div>
+
+																<div class="tools action-buttons">
+																	<a href="#"> <i
+																		class="icon-facebook-sign blue bigger-150"></i>
+																	</a> <a href="#"> <i
+																		class="icon-twitter-sign light-blue bigger-150"></i>
+																	</a> <a href="#"> <i
+																		class="icon-google-plus-sign red bigger-150"></i>
+																	</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<div class="itemdiv memberdiv">
+													<div class="inline position-relative">
+														<div class="user">
+															<a href="#"> <img src="${path}/avatars/avatar3.png"
+																alt="Alexa Doe's avatar" />
+															</a>
+														</div>
+
+														<div class="body">
+															<div class="name">
+																<a href="#"> <span
+																	class="user-status status-offline"></span> Alexa Doe
+																</a>
+															</div>
+														</div>
+
+														<div class="popover">
+															<div class="arrow"></div>
+
+															<div class="popover-content">
+																<div class="bolder">Accounting</div>
+
+																<div class="time">
+																	<i class="icon-time middle bigger-120 grey"></i> <span
+																		class="grey"> 4 hours ago </span>
+																</div>
+
+																<div class="hr dotted hr-8"></div>
+
+																<div class="tools action-buttons">
+																	<a href="#"> <i
+																		class="icon-facebook-sign blue bigger-150"></i>
+																	</a> <a href="#"> <i
+																		class="icon-twitter-sign light-blue bigger-150"></i>
+																	</a> <a href="#"> <i
+																		class="icon-google-plus-sign red bigger-150"></i>
+																	</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="hr hr10 hr-double"></div>
+
+											<ul class="pager pull-right">
+												<li class="previous disabled"><a href="#">&larr;
+														前一页</a></li>
+
+												<li class="next"><a href="#">后一页 &rarr;</a></li>
+											</ul>
+										</div>
+										<!-- /#friends -->
+
+										<div id="pictures" class="tab-pane">
+											<ul class="ace-thumbnails">
+												<li><a href="#" data-rel="colorbox"> <img
+														alt="150x150" src="${path}/images/gallery/thumb-1.jpg" />
+														<div class="text">
+															<div class="inner">Sample Caption on Hover</div>
+														</div>
+												</a>
+
+													<div class="tools tools-bottom">
+														<a href="#"> <i class="icon-link"></i>
+														</a> <a href="#"> <i class="icon-paper-clip"></i>
+														</a> <a href="#"> <i class="icon-pencil"></i>
+														</a> <a href="#"> <i class="icon-remove red"></i>
+														</a>
+													</div></li>
+
+												<li><a href="#" data-rel="colorbox"> <img
+														alt="150x150" src="${path}/images/gallery/thumb-2.jpg" />
+														<div class="text">
+															<div class="inner">带遮罩提示的相册例子</div>
+														</div>
+												</a>
+
+													<div class="tools tools-bottom">
+														<a href="#"> <i class="icon-link"></i>
+														</a> <a href="#"> <i class="icon-paper-clip"></i>
+														</a> <a href="#"> <i class="icon-pencil"></i>
+														</a> <a href="#"> <i class="icon-remove red"></i>
+														</a>
+													</div></li>
+
+												<li><a href="#" data-rel="colorbox"> <img
+														alt="150x150" src="${path}/images/gallery/thumb-3.jpg" />
+														<div class="text">
+															<div class="inner">带遮罩提示的相册例子</div>
+														</div>
+												</a>
+
+													<div class="tools tools-bottom">
+														<a href="#"> <i class="icon-link"></i>
+														</a> <a href="#"> <i class="icon-paper-clip"></i>
+														</a> <a href="#"> <i class="icon-pencil"></i>
+														</a> <a href="#"> <i class="icon-remove red"></i>
+														</a>
+													</div></li>
+
+												<li><a href="#" data-rel="colorbox"> <img
+														alt="150x150" src="${path}/images/gallery/thumb-4.jpg" />
+														<div class="text">
+															<div class="inner">带遮罩提示的相册例子</div>
+														</div>
+												</a>
+
+													<div class="tools tools-bottom">
+														<a href="#"> <i class="icon-link"></i>
+														</a> <a href="#"> <i class="icon-paper-clip"></i>
+														</a> <a href="#"> <i class="icon-pencil"></i>
+														</a> <a href="#"> <i class="icon-remove red"></i>
+														</a>
+													</div></li>
+
+												<li><a href="#" data-rel="colorbox"> <img
+														alt="150x150" src="${path}/images/gallery/thumb-5.jpg" />
+														<div class="text">
+															<div class="inner">带遮罩提示的相册例子</div>
+														</div>
+												</a>
+
+													<div class="tools tools-bottom">
+														<a href="#"> <i class="icon-link"></i>
+														</a> <a href="#"> <i class="icon-paper-clip"></i>
+														</a> <a href="#"> <i class="icon-pencil"></i>
+														</a> <a href="#"> <i class="icon-remove red"></i>
+														</a>
+													</div></li>
+
+												<li><a href="#" data-rel="colorbox"> <img
+														alt="150x150" src="${path}/images/gallery/thumb-6.jpg" />
+														<div class="text">
+															<div class="inner">带遮罩提示的相册例子</div>
+														</div>
+												</a>
+
+													<div class="tools tools-bottom">
+														<a href="#"> <i class="icon-link"></i>
+														</a> <a href="#"> <i class="icon-paper-clip"></i>
+														</a> <a href="#"> <i class="icon-pencil"></i>
+														</a> <a href="#"> <i class="icon-remove red"></i>
+														</a>
+													</div></li>
+
+												<li><a href="#" data-rel="colorbox"> <img
+														alt="150x150" src="${path}/images/gallery/thumb-1.jpg" />
+														<div class="text">
+															<div class="inner">带遮罩提示的相册例子</div>
+														</div>
+												</a>
+
+													<div class="tools tools-bottom">
+														<a href="#"> <i class="icon-link"></i>
+														</a> <a href="#"> <i class="icon-paper-clip"></i>
+														</a> <a href="#"> <i class="icon-pencil"></i>
+														</a> <a href="#"> <i class="icon-remove red"></i>
+														</a>
+													</div></li>
+
+												<li><a href="#" data-rel="colorbox"> <img
+														alt="150x150" src="${path}/images/gallery/thumb-2.jpg" />
+														<div class="text">
+															<div class="inner">带遮罩提示的相册例子</div>
+														</div>
+												</a>
+
+													<div class="tools tools-bottom">
+														<a href="#"> <i class="icon-link"></i>
+														</a> <a href="#"> <i class="icon-paper-clip"></i>
+														</a> <a href="#"> <i class="icon-pencil"></i>
+														</a> <a href="#"> <i class="icon-remove red"></i>
+														</a>
+													</div></li>
+											</ul>
+										</div>
+										<!-- /#pictures -->
 									</div>
 								</div>
-						</div><!-- /.col -->
-					</div><!-- /.row -->
-				</div><!-- /.page-content-area -->
-			</div><!-- /.page-content -->
-		</div><!-- /.main-content -->
+							</div>
+						</div>
+						<!-- /.col -->
+					</div>
+					<!-- /.row -->
+				</div>
+				<!-- /.page-content-area -->
+			</div>
+			<!-- /.page-content -->
+		</div>
+		<!-- /.main-content -->
 
-		<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
-			<i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+		<a href="#" id="btn-scroll-up"
+			class="btn-scroll-up btn btn-sm btn-inverse"> <i
+			class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
 		</a>
-	</div><!-- /.main-container -->
+	</div>
+	<!-- /.main-container -->
 
 	<!-- basic scripts -->
 

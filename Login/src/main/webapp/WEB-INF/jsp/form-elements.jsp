@@ -1,221 +1,179 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<%-- <% 
+<%-- <% 
 		String path = request.getContextPath();
 		String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
 	%> --%>
-	<%-- <base href="<%=basePath%>">  --%>
-	<c:set value="${pageContext.request.contextPath}" var="path" scope="page"/>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>表单组件 - 表单 - 统一开发平台 - UI库</title>
-	<meta name="description" content="Restyling jQuery UI Widgets and Elements" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-	<link rel="stylesheet" href="${path}/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="${path}/css/font-awesome.min.css" />
-	
-	<link rel="stylesheet" href="${path}/css/jquery-ui.custom.min.css" />
-	<link rel="stylesheet" href="${path}/css/chosen.css" />
-	<link rel="stylesheet" href="${path}/css/datepicker.css" />
-	<link rel="stylesheet" href="${path}/css/bootstrap-timepicker.css" />
-	<link rel="stylesheet" href="${path}/css/daterangepicker.css" />
-	<link rel="stylesheet" href="${path}/css/bootstrap-datetimepicker.css" />
-	<link rel="stylesheet" href="${path}/css/colorpicker.css" />
+<%-- <base href="<%=basePath%>">  --%>
+<c:set value="${pageContext.request.contextPath}" var="path"
+	scope="page" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>表单组件 - 表单 - 统一开发平台 - UI库</title>
+<meta name="description"
+	content="Restyling jQuery UI Widgets and Elements" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<link rel="stylesheet" href="${path}/css/bootstrap.min.css" />
+<link rel="stylesheet" href="${path}/css/font-awesome.min.css" />
 
-	<link rel="stylesheet" href="${path}/css/ace-fonts.css" />
-	<link rel="stylesheet" href="${path}/css/ace.min.css" id="main-ace-style" />
-	<!--[if lte IE 9]>
+<link rel="stylesheet" href="${path}/css/jquery-ui.custom.min.css" />
+<link rel="stylesheet" href="${path}/css/chosen.css" />
+<link rel="stylesheet" href="${path}/css/datepicker.css" />
+<link rel="stylesheet" href="${path}/css/bootstrap-timepicker.css" />
+<link rel="stylesheet" href="${path}/css/daterangepicker.css" />
+<link rel="stylesheet" href="${path}/css/bootstrap-datetimepicker.css" />
+<link rel="stylesheet" href="${path}/css/colorpicker.css" />
+
+<link rel="stylesheet" href="${path}/css/ace-fonts.css" />
+<link rel="stylesheet" href="${path}/css/ace.min.css"
+	id="main-ace-style" />
+<!--[if lte IE 9]>
 		<link rel="stylesheet" href="${path}/css/ace-part2.min.css" />
 	<![endif]-->
-	<!--[if lte IE 9]>
+<!--[if lte IE 9]>
 	  <link rel="stylesheet" href="${path}/css/ace-ie.min.css" />
 	<![endif]-->
-	<script src="${path}/js/ace-extra.min.js"></script>
+<script src="${path}/js/ace-extra.min.js"></script>
 </head>
 <body class="no-skin">
 	<!-- #section:basics/navbar.layout -->
 	<div id="navbar" class="navbar navbar-default">
 
 		<div class="navbar-container" id="navbar-container">
-			<button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler">
-				<span class="icon-bar"></span>
-
-				<span class="icon-bar"></span>
-
-				<span class="icon-bar"></span>
+			<button type="button" class="navbar-toggle menu-toggler pull-left"
+				id="menu-toggler">
+				<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+					class="icon-bar"></span>
 			</button>
 
 			<div class="navbar-header pull-left">
 				<!-- #section:basics/navbar.layout.brand -->
-				<a href="index.html" class="navbar-brand">
-					<small>
-						<img src="${path}/avatars/logo.png" alt="" />
-					</small>
+				<a href="index.html" class="navbar-brand"> <small> <img
+						src="${path}/avatars/logo.png" alt="" />
+				</small>
 				</a>
 			</div>
 
 			<!-- #section:basics/navbar.dropdown -->
-			<div class="navbar-buttons navbar-header pull-right" role="navigation">
+			<div class="navbar-buttons navbar-header pull-right"
+				role="navigation">
 				<ul class="nav ace-nav">
 
-					<li class="green">
-						<a data-toggle="dropdown" class="dropdown-toggle" href="#">
-							<i class="ace-icon fa fa-envelope icon-animated-vertical"></i>
-							<span class="badge badge-success">5</span>
-						</a>
+					<li class="green"><a data-toggle="dropdown"
+						class="dropdown-toggle" href="#"> <i
+							class="ace-icon fa fa-envelope icon-animated-vertical"></i> <span
+							class="badge badge-success">5</span>
+					</a>
 
-						<ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
-							<li class="dropdown-header">
-								<i class="ace-icon fa fa-envelope-o"></i>
-								13条未读信息
-							</li>
+						<ul
+							class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+							<li class="dropdown-header"><i
+								class="ace-icon fa fa-envelope-o"></i> 13条未读信息</li>
 
 							<li class="dropdown-content">
 								<ul class="dropdown-menu dropdown-navbar">
-									<li>
-										<a href="#">
-											<img src="${path}/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
-											<span class="msg-body">
-												<span class="msg-title">
-													<span class="blue">B2C:</span>
-													系统产生20个错误，12个警告...
-												</span>
-
-												<span class="msg-time">
-													<i class="ace-icon fa fa-clock-o"></i>
-													<span>2014-12-15 18:00:00</span>
-												</span>
+									<li><a href="#"> <img src="${path}/avatars/avatar.png"
+											class="msg-photo" alt="Alex's Avatar" /> <span
+											class="msg-body"> <span class="msg-title"> <span
+													class="blue">B2C:</span> 系统产生20个错误，12个警告...
+											</span> <span class="msg-time"> <i
+													class="ace-icon fa fa-clock-o"></i> <span>2014-12-15
+														18:00:00</span>
 											</span>
-										</a>
-									</li>
+										</span>
+									</a></li>
 
-									<li>
-										<a href="#">
-											<img src="${path}/avatars/avatar3.png" class="msg-photo" alt="Susan's Avatar" />
-											<span class="msg-body">
-												<span class="msg-title">
-													<span class="blue">积分商城:</span>
+									<li><a href="#"> <img
+											src="${path}/avatars/avatar3.png" class="msg-photo"
+											alt="Susan's Avatar" /> <span class="msg-body"> <span
+												class="msg-title"> <span class="blue">积分商城:</span>
 													系统产生20个错误，12个警告...
-												</span>
-
-												<span class="msg-time">
-													<i class="ace-icon fa fa-clock-o"></i>
-													<span>2014-12-15 18:00:00</span>
-												</span>
+											</span> <span class="msg-time"> <i
+													class="ace-icon fa fa-clock-o"></i> <span>2014-12-15
+														18:00:00</span>
 											</span>
-										</a>
-									</li>
+										</span>
+									</a></li>
 
-									<li>
-										<a href="#">
-											<img src="${path}/avatars/avatar4.png" class="msg-photo" alt="Bob's Avatar" />
-											<span class="msg-body">
-												<span class="msg-title">
-													<span class="blue">政府机票采购:</span>
+									<li><a href="#"> <img
+											src="${path}/avatars/avatar4.png" class="msg-photo"
+											alt="Bob's Avatar" /> <span class="msg-body"> <span
+												class="msg-title"> <span class="blue">政府机票采购:</span>
 													系统产生20个错误，12个警告...
-												</span>
-
-												<span class="msg-time">
-													<i class="ace-icon fa fa-clock-o"></i>
-													<span>2014-12-15 18:00:00</span>
-												</span>
+											</span> <span class="msg-time"> <i
+													class="ace-icon fa fa-clock-o"></i> <span>2014-12-15
+														18:00:00</span>
 											</span>
-										</a>
-									</li>
+										</span>
+									</a></li>
 
-									<li>
-										<a href="#">
-											<img src="${path}/avatars/avatar2.png" class="msg-photo" alt="Kate's Avatar" />
-											<span class="msg-body">
-												<span class="msg-title">
-													<span class="blue">B2B:</span>
+									<li><a href="#"> <img
+											src="${path}/avatars/avatar2.png" class="msg-photo"
+											alt="Kate's Avatar" /> <span class="msg-body"> <span
+												class="msg-title"> <span class="blue">B2B:</span>
 													系统产生20个错误，12个警告...
-												</span>
-
-												<span class="msg-time">
-													<i class="ace-icon fa fa-clock-o"></i>
-													<span>2014-12-15 18:00:00</span>
-												</span>
+											</span> <span class="msg-time"> <i
+													class="ace-icon fa fa-clock-o"></i> <span>2014-12-15
+														18:00:00</span>
 											</span>
-										</a>
-									</li>
+										</span>
+									</a></li>
 
-									<li>
-										<a href="#">
-											<img src="${path}/avatars/avatar5.png" class="msg-photo" alt="Fred's Avatar" />
-											<span class="msg-body">
-												<span class="msg-title">
-													<span class="blue">货运系统:</span>
+									<li><a href="#"> <img
+											src="${path}/avatars/avatar5.png" class="msg-photo"
+											alt="Fred's Avatar" /> <span class="msg-body"> <span
+												class="msg-title"> <span class="blue">货运系统:</span>
 													系统产生20个错误，12个警告...
-												</span>
-
-												<span class="msg-time">
-													<i class="ace-icon fa fa-clock-o"></i>
-													<span>2014-12-15 18:00:00</span>
-												</span>
+											</span> <span class="msg-time"> <i
+													class="ace-icon fa fa-clock-o"></i> <span>2014-12-15
+														18:00:00</span>
 											</span>
-										</a>
-									</li>
+										</span>
+									</a></li>
 								</ul>
 							</li>
 
-							<li class="dropdown-footer">
-								<a href="inbox.html">
-									查看全部消息
+							<li class="dropdown-footer"><a href="inbox.html"> 查看全部消息
 									<i class="ace-icon fa fa-arrow-right"></i>
-								</a>
-							</li>
-						</ul>
-					</li>
+							</a></li>
+						</ul></li>
 
 					<!-- #section:basics/navbar.user_menu -->
-					<li class="light-blue">
-						<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-							<img class="nav-user-photo" src="${path}/avatars/user.jpg" alt="Jason's Photo" />
-							<span class="user-info">
-								欢迎您<br />
-								陈子昂
-							</span>
+					<li class="light-blue"><a data-toggle="dropdown" href="#"
+						class="dropdown-toggle"> <img class="nav-user-photo"
+							src="${path}/avatars/user.jpg" alt="Jason's Photo" /> <span
+							class="user-info"> 欢迎您<br /> 陈子昂
+						</span> <i class="ace-icon fa fa-caret-down"></i>
+					</a>
 
-							<i class="ace-icon fa fa-caret-down"></i>
-						</a>
+						<ul
+							class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+							<li><a href="#"> <i class="ace-icon fa fa-cog"></i> 系统设置
+							</a></li>
 
-						<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
-							<li>
-								<a href="#">
-									<i class="ace-icon fa fa-cog"></i>
-									系统设置
-								</a>
-							</li>
-
-							<li>
-								<a href="profile.html">
-									<i class="ace-icon fa fa-user"></i>
-									个人信息设置
-								</a>
-							</li>
+							<li><a href="profile.html"> <i
+									class="ace-icon fa fa-user"></i> 个人信息设置
+							</a></li>
 
 							<li class="divider"></li>
 
-							<li>
-								<a href="#">
-									<i class="ace-icon fa fa-power-off"></i>
+							<li><a href="#"> <i class="ace-icon fa fa-power-off"></i>
 									登出
-								</a>
-							</li>
-						</ul>
-					</li>
+							</a></li>
+						</ul></li>
 
 					<!-- /section:basics/navbar.user_menu -->
 				</ul>
 			</div>
 
 			<!-- /section:basics/navbar.dropdown -->
-		</div><!-- /.navbar-container -->
+		</div>
+		<!-- /.navbar-container -->
 	</div>
 
 	<!-- /section:basics/navbar.layout -->
@@ -225,380 +183,189 @@
 		<div id="sidebar" class="sidebar responsive">
 
 			<ul class="nav nav-list">
-				<li class="active">
-					<a href="index.html">
-						<i class="menu-icon fa fa-tachometer"></i>
-						<span class="menu-text"> 总控制台 </span>
-					</a>
+				<li class="active"><a href="index.html"> <i
+						class="menu-icon fa fa-tachometer"></i> <span class="menu-text">
+							总控制台 </span>
+				</a> <b class="arrow"></b></li>
 
-					<b class="arrow"></b>
-				</li>
-
-				<li class="">
-					<a href="#" class="dropdown-toggle">
-						<i class="menu-icon fa fa-desktop"></i>
-						<span class="menu-text"> UI &amp; 元素 </span>
-
-						<b class="arrow fa fa-angle-down"></b>
-					</a>
-
-					<b class="arrow"></b>
+				<li class=""><a href="#" class="dropdown-toggle"> <i
+						class="menu-icon fa fa-desktop"></i> <span class="menu-text">
+							UI &amp; 元素 </span> <b class="arrow fa fa-angle-down"></b>
+				</a> <b class="arrow"></b>
 
 					<ul class="submenu">
 
-						<li class="">
-							<a href="typography.html">
-								<i class="menu-icon fa fa-caret-right"></i>
-								排版
-							</a>
+						<li class=""><a href="typography.html"> <i
+								class="menu-icon fa fa-caret-right"></i> 排版
+						</a> <b class="arrow"></b></li>
 
-							<b class="arrow"></b>
-						</li>
+						<li class=""><a href="elements.html"> <i
+								class="menu-icon fa fa-caret-right"></i> UI元素
+						</a> <b class="arrow"></b></li>
 
-						<li class="">
-							<a href="elements.html">
-								<i class="menu-icon fa fa-caret-right"></i>
-								UI元素
-							</a>
+						<li class=""><a href="buttons.html"> <i
+								class="menu-icon fa fa-caret-right"></i> 按钮 &amp; 图标
+						</a> <b class="arrow"></b></li>
 
-							<b class="arrow"></b>
-						</li>
+						<li class=""><a href="treeview.html"> <i
+								class="menu-icon fa fa-caret-right"></i> 树状结构
+						</a> <b class="arrow"></b></li>
 
-						<li class="">
-							<a href="buttons.html">
-								<i class="menu-icon fa fa-caret-right"></i>
-								按钮 &amp; 图标
-							</a>
+						<li class="active"><a href="jquery-ui.html"> <i
+								class="menu-icon fa fa-caret-right"></i> jQuery UI
+						</a> <b class="arrow"></b></li>
 
-							<b class="arrow"></b>
-						</li>
+						<li class=""><a href="nestable-list.html"> <i
+								class="menu-icon fa fa-caret-right"></i> 可拖拽列表
+						</a> <b class="arrow"></b></li>
 
-						<li class="">
-							<a href="treeview.html">
-								<i class="menu-icon fa fa-caret-right"></i>
-								树状结构
-							</a>
-
-							<b class="arrow"></b>
-						</li>
-
-						<li class="active">
-							<a href="jquery-ui.html">
-								<i class="menu-icon fa fa-caret-right"></i>
-								jQuery UI
-							</a>
-
-							<b class="arrow"></b>
-						</li>
-
-						<li class="">
-							<a href="nestable-list.html">
-								<i class="menu-icon fa fa-caret-right"></i>
-								可拖拽列表
-							</a>
-
-							<b class="arrow"></b>
-						</li>
-
-						<li class="">
-							<a href="#" class="dropdown-toggle">
-								<i class="menu-icon fa fa-caret-right"></i>
-								三级菜单
-								<b class="arrow fa fa-angle-down"></b>
-							</a>
-
-							<b class="arrow"></b>
+						<li class=""><a href="#" class="dropdown-toggle"> <i
+								class="menu-icon fa fa-caret-right"></i> 三级菜单 <b
+								class="arrow fa fa-angle-down"></b>
+						</a> <b class="arrow"></b>
 
 							<ul class="submenu">
-								<li class="">
-									<a href="#">
-										<i class="menu-icon fa fa-leaf green"></i>
-										第一级
-									</a>
+								<li class=""><a href="#"> <i
+										class="menu-icon fa fa-leaf green"></i> 第一级
+								</a> <b class="arrow"></b></li>
 
-									<b class="arrow"></b>
-								</li>
-
-								<li class="">
-									<a href="#" class="dropdown-toggle">
-										<i class="menu-icon fa fa-pencil orange"></i>
-
-										第四级
-										<b class="arrow fa fa-angle-down"></b>
-									</a>
-
-									<b class="arrow"></b>
+								<li class=""><a href="#" class="dropdown-toggle"> <i
+										class="menu-icon fa fa-pencil orange"></i> 第四级 <b
+										class="arrow fa fa-angle-down"></b>
+								</a> <b class="arrow"></b>
 
 									<ul class="submenu">
-										<li class="">
-											<a href="#">
-												<i class="menu-icon fa fa-plus purple"></i>
-												添加商品
-											</a>
+										<li class=""><a href="#"> <i
+												class="menu-icon fa fa-plus purple"></i> 添加商品
+										</a> <b class="arrow"></b></li>
 
-											<b class="arrow"></b>
-										</li>
+										<li class=""><a href="#"> <i
+												class="menu-icon fa fa-eye pink"></i> 查看商品
+										</a> <b class="arrow"></b></li>
+									</ul></li>
+							</ul></li>
+					</ul></li>
 
-										<li class="">
-											<a href="#">
-												<i class="menu-icon fa fa-eye pink"></i>
-												查看商品
-											</a>
-
-											<b class="arrow"></b>
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</li>
-
-				<li class="">
-					<a href="#" class="dropdown-toggle">
-						<i class="menu-icon fa fa-list"></i>
-						<span class="menu-text"> 表格 </span>
-
-						<b class="arrow fa fa-angle-down"></b>
-					</a>
-
-					<b class="arrow"></b>
+				<li class=""><a href="#" class="dropdown-toggle"> <i
+						class="menu-icon fa fa-list"></i> <span class="menu-text">
+							表格 </span> <b class="arrow fa fa-angle-down"></b>
+				</a> <b class="arrow"></b>
 
 					<ul class="submenu">
-						<li class="">
-							<a href="tables.html">
-								<i class="menu-icon fa fa-caret-right"></i>
-								简单通用表格
-							</a>
+						<li class=""><a href="tables.html"> <i
+								class="menu-icon fa fa-caret-right"></i> 简单通用表格
+						</a> <b class="arrow"></b></li>
 
-							<b class="arrow"></b>
-						</li>
+						<li class=""><a href="jqgrid.html"> <i
+								class="menu-icon fa fa-caret-right"></i> jqGrid插件表格
+						</a> <b class="arrow"></b></li>
+					</ul></li>
 
-						<li class="">
-							<a href="jqgrid.html">
-								<i class="menu-icon fa fa-caret-right"></i>
-								jqGrid插件表格
-							</a>
-
-							<b class="arrow"></b>
-						</li>
-					</ul>
-				</li>
-
-				<li class="active open">
-					<a href="#" class="dropdown-toggle">
-						<i class="menu-icon fa fa-pencil-square-o"></i>
-						<span class="menu-text"> 表单 </span>
-
-						<b class="arrow fa fa-angle-down"></b>
-					</a>
-
-					<b class="arrow"></b>
+				<li class="active open"><a href="#" class="dropdown-toggle">
+						<i class="menu-icon fa fa-pencil-square-o"></i> <span
+						class="menu-text"> 表单 </span> <b class="arrow fa fa-angle-down"></b>
+				</a> <b class="arrow"></b>
 
 					<ul class="submenu">
-						<li class="active">
-							<a href="form-elements.html">
-								<i class="menu-icon fa fa-caret-right"></i>
-								表单组件
-							</a>
+						<li class="active"><a href="form-elements.html"> <i
+								class="menu-icon fa fa-caret-right"></i> 表单组件
+						</a> <b class="arrow"></b></li>
 
-							<b class="arrow"></b>
-						</li>
+						<li class=""><a href="form-wizard.html"> <i
+								class="menu-icon fa fa-caret-right"></i> 向导提示 &amp; 验证
+						</a> <b class="arrow"></b></li>
 
-						<li class="">
-							<a href="form-wizard.html">
-								<i class="menu-icon fa fa-caret-right"></i>
-								向导提示 &amp; 验证
-							</a>
+						<li class=""><a href="wysiwyg.html"> <i
+								class="menu-icon fa fa-caret-right"></i> 编辑器
+						</a> <b class="arrow"></b></li>
 
-							<b class="arrow"></b>
-						</li>
+						<li class=""><a href="dropzone.html"> <i
+								class="menu-icon fa fa-caret-right"></i> 文件上传
+						</a> <b class="arrow"></b></li>
+					</ul></li>
 
-						<li class="">
-							<a href="wysiwyg.html">
-								<i class="menu-icon fa fa-caret-right"></i>
-								编辑器
-							</a>
+				<li class=""><a href="widgets.html"> <i
+						class="menu-icon fa fa-list-alt"></i> <span class="menu-text">
+							插件 </span>
+				</a> <b class="arrow"></b></li>
 
-							<b class="arrow"></b>
-						</li>
-
-						<li class="">
-							<a href="dropzone.html">
-								<i class="menu-icon fa fa-caret-right"></i>
-								文件上传
-							</a>
-
-							<b class="arrow"></b>
-						</li>
-					</ul>
-				</li>
-
-				<li class="">
-					<a href="widgets.html">
-						<i class="menu-icon fa fa-list-alt"></i>
-						<span class="menu-text"> 插件 </span>
-					</a>
-
-					<b class="arrow"></b>
-				</li>
-
-				<li class="">
-					<a href="calendar.html">
-						<i class="menu-icon fa fa-calendar"></i>
-
-						<span class="menu-text">
-							日历
-
-							<!-- #section:basics/sidebar.layout.badge -->
-							<span class="badge badge-transparent tooltip-error" title="有2件重要事件">
+				<li class=""><a href="calendar.html"> <i
+						class="menu-icon fa fa-calendar"></i> <span class="menu-text">
+							日历 <!-- #section:basics/sidebar.layout.badge --> <span
+							class="badge badge-transparent tooltip-error" title="有2件重要事件">
 								<i class="ace-icon fa fa-exclamation-triangle red bigger-130"></i>
-							</span>
+						</span> <!-- /section:basics/sidebar.layout.badge -->
+					</span>
+				</a> <b class="arrow"></b></li>
 
-							<!-- /section:basics/sidebar.layout.badge -->
-						</span>
-					</a>
+				<li class=""><a href="gallery.html"> <i
+						class="menu-icon fa fa-picture-o"></i> <span class="menu-text">
+							相册 </span>
+				</a> <b class="arrow"></b></li>
 
-					<b class="arrow"></b>
-				</li>
-
-				<li class="">
-					<a href="gallery.html">
-						<i class="menu-icon fa fa-picture-o"></i>
-						<span class="menu-text"> 相册 </span>
-					</a>
-
-					<b class="arrow"></b>
-				</li>
-
-				<li class="">
-					<a href="#" class="dropdown-toggle">
-						<i class="menu-icon fa fa-tag"></i>
-						<span class="menu-text"> 更多页面 </span>
-
-						<b class="arrow fa fa-angle-down"></b>
-					</a>
-
-					<b class="arrow"></b>
+				<li class=""><a href="#" class="dropdown-toggle"> <i
+						class="menu-icon fa fa-tag"></i> <span class="menu-text">
+							更多页面 </span> <b class="arrow fa fa-angle-down"></b>
+				</a> <b class="arrow"></b>
 
 					<ul class="submenu">
-						<li class="">
-							<a href="profile.html">
-								<i class="menu-icon fa fa-caret-right"></i>
-								用户信息
-							</a>
+						<li class=""><a href="profile.html"> <i
+								class="menu-icon fa fa-caret-right"></i> 用户信息
+						</a> <b class="arrow"></b></li>
 
-							<b class="arrow"></b>
-						</li>
+						<li class=""><a href="pricing.html"> <i
+								class="menu-icon fa fa-caret-right"></i> 售价单
+						</a> <b class="arrow"></b></li>
 
-						<li class="">
-							<a href="pricing.html">
-								<i class="menu-icon fa fa-caret-right"></i>
-								售价单
-							</a>
+						<li class=""><a href="invoice.html"> <i
+								class="menu-icon fa fa-caret-right"></i> 购物车
+						</a> <b class="arrow"></b></li>
 
-							<b class="arrow"></b>
-						</li>
+						<li class=""><a href="timeline.html"> <i
+								class="menu-icon fa fa-caret-right"></i> 时间轴
+						</a> <b class="arrow"></b></li>
 
-						<li class="">
-							<a href="invoice.html">
-								<i class="menu-icon fa fa-caret-right"></i>
-								购物车
-							</a>
+						<li class=""><a href="login.html"> <i
+								class="menu-icon fa fa-caret-right"></i> 登录注册
+						</a> <b class="arrow"></b></li>
+					</ul></li>
 
-							<b class="arrow"></b>
-						</li>
-
-						<li class="">
-							<a href="timeline.html">
-								<i class="menu-icon fa fa-caret-right"></i>
-								时间轴
-							</a>
-
-							<b class="arrow"></b>
-						</li>
-						
-						<li class="">
-							<a href="login.html">
-								<i class="menu-icon fa fa-caret-right"></i>
-								登录注册
-							</a>
-
-							<b class="arrow"></b>
-						</li>
-					</ul>
-				</li>
-
-				<li class="">
-					<a href="#" class="dropdown-toggle">
-						<i class="menu-icon fa fa-file-o"></i>
-
-						<span class="menu-text">
-							其他页面
-
-							<!-- #section:basics/sidebar.layout.badge -->
-							<span class="badge badge-primary">5</span>
-
-							<!-- /section:basics/sidebar.layout.badge -->
-						</span>
-
-						<b class="arrow fa fa-angle-down"></b>
-					</a>
-
-					<b class="arrow"></b>
+				<li class=""><a href="#" class="dropdown-toggle"> <i
+						class="menu-icon fa fa-file-o"></i> <span class="menu-text">
+							其他页面 <!-- #section:basics/sidebar.layout.badge --> <span
+							class="badge badge-primary">5</span> <!-- /section:basics/sidebar.layout.badge -->
+					</span> <b class="arrow fa fa-angle-down"></b>
+				</a> <b class="arrow"></b>
 
 					<ul class="submenu">
-						<li class="">
-							<a href="faq.html">
-								<i class="menu-icon fa fa-caret-right"></i>
-								帮助页面
-							</a>
+						<li class=""><a href="faq.html"> <i
+								class="menu-icon fa fa-caret-right"></i> 帮助页面
+						</a> <b class="arrow"></b></li>
 
-							<b class="arrow"></b>
-						</li>
+						<li class=""><a href="error-404.html"> <i
+								class="menu-icon fa fa-caret-right"></i> 404错误页面
+						</a> <b class="arrow"></b></li>
 
-						<li class="">
-							<a href="error-404.html">
-								<i class="menu-icon fa fa-caret-right"></i>
-								404错误页面
-							</a>
+						<li class=""><a href="error-500.html"> <i
+								class="menu-icon fa fa-caret-right"></i> 500错误页面
+						</a> <b class="arrow"></b></li>
 
-							<b class="arrow"></b>
-						</li>
+						<li class=""><a href="grid.html"> <i
+								class="menu-icon fa fa-caret-right"></i> 网格
+						</a> <b class="arrow"></b></li>
 
-						<li class="">
-							<a href="error-500.html">
-								<i class="menu-icon fa fa-caret-right"></i>
-								500错误页面
-							</a>
-
-							<b class="arrow"></b>
-						</li>
-
-						<li class="">
-							<a href="grid.html">
-								<i class="menu-icon fa fa-caret-right"></i>
-								网格
-							</a>
-
-							<b class="arrow"></b>
-						</li>
-
-						<li class="">
-							<a href="blank.html">
-								<i class="menu-icon fa fa-caret-right"></i>
-								空白页面
-							</a>
-
-							<b class="arrow"></b>
-						</li>
-					</ul>
-				</li>
-			</ul><!-- /.nav-list -->
+						<li class=""><a href="blank.html"> <i
+								class="menu-icon fa fa-caret-right"></i> 空白页面
+						</a> <b class="arrow"></b></li>
+					</ul></li>
+			</ul>
+			<!-- /.nav-list -->
 
 
 			<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
-				<i class="ace-icon fa fa-angle-double-left" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
+				<i class="ace-icon fa fa-angle-double-left"
+					data-icon1="ace-icon fa fa-angle-double-left"
+					data-icon2="ace-icon fa fa-angle-double-right"></i>
 			</div>
 
 		</div>
@@ -607,27 +374,24 @@
 		<div class="main-content">
 			<div class="breadcrumbs" id="breadcrumbs">
 				<ul class="breadcrumb">
-					<li>
-						<i class="ace-icon fa fa-home home-icon"></i>
-						<a href="index.html">UI库首页</a>
-					</li>
-					<li>
-						<a href="javascript:void(0)">表单</a>
-					</li>
-					<li>
-						<a href="elements.html">表单元素</a>
-					</li>
-				</ul><!-- /.breadcrumb -->
+					<li><i class="ace-icon fa fa-home home-icon"></i> <a
+						href="index.html">UI库首页</a></li>
+					<li><a href="javascript:void(0)">表单</a></li>
+					<li><a href="elements.html">表单元素</a></li>
+				</ul>
+				<!-- /.breadcrumb -->
 
 				<!-- #section:basics/content.searchbox -->
 				<div class="nav-search" id="nav-search">
 					<form class="form-search">
-						<span class="input-icon">
-							<input type="text" placeholder="请输入关键字 ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
-							<i class="ace-icon fa fa-search nav-search-icon"></i>
+						<span class="input-icon"> <input type="text"
+							placeholder="请输入关键字 ..." class="nav-search-input"
+							id="nav-search-input" autocomplete="off" /> <i
+							class="ace-icon fa fa-search nav-search-icon"></i>
 						</span>
 					</form>
-				</div><!-- /.nav-search -->
+				</div>
+				<!-- /.nav-search -->
 			</div>
 
 			<!-- /section:basics/content.breadcrumbs -->
@@ -641,18 +405,22 @@
 							<form class="form-horizontal" role="form">
 								<!-- #section:elements.form -->
 								<div class="form-group">
-									<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 提交部门：</label>
+									<label class="col-sm-3 control-label no-padding-right"
+										for="form-field-1"> 提交部门：</label>
 
 									<div class="col-sm-9">
-										<input type="text" id="form-field-1" placeholder="输入部门名称" class="col-xs-10 col-sm-5" />
+										<input type="text" id="form-field-1" placeholder="输入部门名称"
+											class="col-xs-10 col-sm-5" />
 									</div>
 								</div>
 
 								<div class="form-group">
-									<label class="col-sm-3 control-label no-padding-right" for="form-field-1-1">差旅单名称： </label>
+									<label class="col-sm-3 control-label no-padding-right"
+										for="form-field-1-1">差旅单名称： </label>
 
 									<div class="col-sm-9">
-										<input type="text" id="form-field-1-1" placeholder="输入差旅单名称" class=" col-xs-10 col-sm-5" />
+										<input type="text" id="form-field-1-1" placeholder="输入差旅单名称"
+											class=" col-xs-10 col-sm-5" />
 									</div>
 								</div>
 
@@ -660,20 +428,24 @@
 								<div class="space-4"></div>
 
 								<div class="form-group">
-									<label class="col-sm-3 control-label no-padding-right" for="form-field-2">查询密码： </label>
+									<label class="col-sm-3 control-label no-padding-right"
+										for="form-field-2">查询密码： </label>
 
 									<div class="col-sm-9">
-										<input type="password" id="form-field-2" placeholder="输入查询密码" class="col-xs-10 col-sm-5" />
+										<input type="password" id="form-field-2" placeholder="输入查询密码"
+											class="col-xs-10 col-sm-5" />
 									</div>
 								</div>
 
 								<div class="space-4"></div>
 
 								<div class="form-group">
-									<label class="col-sm-3 control-label no-padding-right" for="form-input-readonly">用户名(只读)： </label>
+									<label class="col-sm-3 control-label no-padding-right"
+										for="form-input-readonly">用户名(只读)： </label>
 
 									<div class="col-sm-9">
-										<input readonly="" type="text" class="col-xs-10 col-sm-5" id="form-input-readonly" value="这里是只读表单，不允许你修改，哇咔咔！" />
+										<input readonly="" type="text" class="col-xs-10 col-sm-5"
+											id="form-input-readonly" value="这里是只读表单，不允许你修改，哇咔咔！" />
 									</div>
 								</div>
 
@@ -684,14 +456,12 @@
 
 									<div class="col-sm-9">
 										<!-- #section:elements.form.input-icon -->
-										<span class="input-icon">
-											<input type="text" id="form-field-icon-1" />
-											<i class="ace-icon fa fa-leaf blue"></i>
-										</span>
-
-										<span class="input-icon input-icon-right">
-											<input type="text" id="form-field-icon-2" />
-											<i class="ace-icon fa fa-leaf green"></i>
+										<span class="input-icon"> <input type="text"
+											id="form-field-icon-1" /> <i
+											class="ace-icon fa fa-leaf blue"></i>
+										</span> <span class="input-icon input-icon-right"> <input
+											type="text" id="form-field-icon-2" /> <i
+											class="ace-icon fa fa-leaf green"></i>
 										</span>
 
 										<!-- /section:elements.form.input-icon -->
@@ -701,22 +471,27 @@
 								<div class="space-4"></div>
 
 								<div class="form-group">
-									<label class="col-sm-3 control-label no-padding-right" for="form-field-6">带提示框和提示按钮的输入框:</label>
+									<label class="col-sm-3 control-label no-padding-right"
+										for="form-field-6">带提示框和提示按钮的输入框:</label>
 
 									<div class="col-sm-9">
-										<input data-rel="tooltip" type="text" id="form-field-6" placeholder="" title="我是提示信息" data-placement="bottom" />
-										<span class="help-button" data-rel="popover" data-trigger="hover" data-placement="left" data-content="这里也是提示信息" title="我是提示信息">?</span>
+										<input data-rel="tooltip" type="text" id="form-field-6"
+											placeholder="" title="我是提示信息" data-placement="bottom" /> <span
+											class="help-button" data-rel="popover" data-trigger="hover"
+											data-placement="left" data-content="这里也是提示信息" title="我是提示信息">?</span>
 									</div>
 								</div>
 
 								<div class="space-4"></div>
 
 								<div class="form-group">
-									<label class="col-sm-3 control-label no-padding-right" for="form-field-tags">标签式的输入框：</label>
+									<label class="col-sm-3 control-label no-padding-right"
+										for="form-field-tags">标签式的输入框：</label>
 
 									<div class="col-sm-9">
 										<div class="inline">
-											<input type="text" name="tags" id="form-field-tags" value="我是标签一" placeholder="这里输入标签，然后按确认 ..." />
+											<input type="text" name="tags" id="form-field-tags"
+												value="我是标签一" placeholder="这里输入标签，然后按确认 ..." />
 										</div>
 
 										<!-- /section:plugins/input.tag-input -->
@@ -726,12 +501,14 @@
 								<div class="space-4"></div>
 
 								<div class="form-group">
-									<label class="col-sm-3 control-label no-padding-right" for="typeahead">自动完成输入框(基于Typeahead.js)：</label>
+									<label class="col-sm-3 control-label no-padding-right"
+										for="typeahead">自动完成输入框(基于Typeahead.js)：</label>
 
 									<div class="col-sm-9">
 										<!-- #section:plugins/bootstrap.typeahead-js -->
 										<div class="pos-rel">
-											<input class="typeahead scrollable" type="text" id="typeahead" placeholder="随便输入一个字母试试" />
+											<input class="typeahead scrollable" type="text"
+												id="typeahead" placeholder="随便输入一个字母试试" />
 										</div>
 
 										<!-- /section:plugins/bootstrap.typeahead-js -->
@@ -740,26 +517,29 @@
 
 
 								<div class="form-group">
-									<label class="col-sm-3 control-label no-padding-right" for="limited">带输入统计功能和自动变大的输入框：</label>
+									<label class="col-sm-3 control-label no-padding-right"
+										for="limited">带输入统计功能和自动变大的输入框：</label>
 									<div class="col-sm-9">
 										<div class="pos-rel">
-											<textarea class="form-control limited autosize-transition" id="limited" maxlength="50"></textarea>
+											<textarea class="form-control limited autosize-transition"
+												id="limited" maxlength="50"></textarea>
 										</div>
 									</div>
 								</div>
 
 
 								<div class="form-group">
-									<label class="col-sm-3 control-label no-padding-right" for="form-field-tags">差旅单状态：</label>
+									<label class="col-sm-3 control-label no-padding-right"
+										for="form-field-tags">差旅单状态：</label>
 									<div class="col-sm-2">
 										<div class="pos-rel">
 											<select class="form-control" id="form-field-select-1">
-															<option value="">请选择状态</option>
-															<option value="AL">未提交</option>
-															<option value="AK">已提交</option>
-															<option value="AZ">待审核</option>
-															<option value="AR">审核通过</option>
-														</select>
+												<option value="">请选择状态</option>
+												<option value="AL">未提交</option>
+												<option value="AK">已提交</option>
+												<option value="AZ">待审核</option>
+												<option value="AR">审核通过</option>
+											</select>
 										</div>
 									</div>
 								</div>
@@ -768,23 +548,19 @@
 								<div class="clearfix form-actions">
 									<div class="col-md-offset-3 col-md-9">
 										<button class="btn btn-info" type="button">
-											<i class="ace-icon fa fa-check bigger-110"></i>
-											立即提交
+											<i class="ace-icon fa fa-check bigger-110"></i> 立即提交
 										</button>
 
 										&nbsp; &nbsp; &nbsp;
 										<button class="btn" type="reset">
-											<i class="ace-icon fa fa-undo bigger-110"></i>
-											重置
+											<i class="ace-icon fa fa-undo bigger-110"></i> 重置
 										</button>
 									</div>
 								</div>
 
 								<div class="hr hr-24"></div>
 
-								<h3 class="header smaller lighter grey">
-									单选框和多选框
-								</h3>
+								<h3 class="header smaller lighter grey">单选框和多选框</h3>
 
 								<div class="row">
 									<div class="col-xs-12 col-sm-3">
@@ -793,30 +569,30 @@
 
 											<!-- #section:custom/checkbox -->
 											<div class="checkbox">
-												<label>
-													<input name="form-field-checkbox" type="checkbox" class="ace" />
-													<span class="lbl"> 经济舱</span>
+												<label> <input name="form-field-checkbox"
+													type="checkbox" class="ace" /> <span class="lbl">
+														经济舱</span>
 												</label>
 											</div>
 
 											<div class="checkbox">
-												<label>
-													<input name="form-field-checkbox" type="checkbox" class="ace" />
-													<span class="lbl"> 公务舱</span>
+												<label> <input name="form-field-checkbox"
+													type="checkbox" class="ace" /> <span class="lbl">
+														公务舱</span>
 												</label>
 											</div>
 
 											<div class="checkbox">
-												<label>
-													<input name="form-field-checkbox" class="ace ace-checkbox-2" type="checkbox" />
-													<span class="lbl"> 高端经济舱</span>
+												<label> <input name="form-field-checkbox"
+													class="ace ace-checkbox-2" type="checkbox" /> <span
+													class="lbl"> 高端经济舱</span>
 												</label>
 											</div>
 
 											<div class="checkbox">
-												<label class="block">
-													<input name="form-field-checkbox" disabled="" type="checkbox" class="ace" />
-													<span class="lbl"> 头等舱</span>
+												<label class="block"> <input
+													name="form-field-checkbox" disabled="" type="checkbox"
+													class="ace" /> <span class="lbl"> 头等舱</span>
 												</label>
 											</div>
 
@@ -829,30 +605,26 @@
 											<label class="control-label bolder blue"> 单选框</label>
 
 											<div class="radio">
-												<label>
-													<input name="form-field-radio" type="radio" class="ace" />
-													<span class="lbl"> 经济舱</span>
+												<label> <input name="form-field-radio" type="radio"
+													class="ace" /> <span class="lbl"> 经济舱</span>
 												</label>
 											</div>
 
 											<div class="radio">
-												<label>
-													<input name="form-field-radio" type="radio" class="ace" />
-													<span class="lbl"> 公务舱</span>
+												<label> <input name="form-field-radio" type="radio"
+													class="ace" /> <span class="lbl"> 公务舱</span>
 												</label>
 											</div>
 
 											<div class="radio">
-												<label>
-													<input name="form-field-radio" type="radio" class="ace" />
-													<span class="lbl"> 高端经济舱</span>
+												<label> <input name="form-field-radio" type="radio"
+													class="ace" /> <span class="lbl"> 高端经济舱</span>
 												</label>
 											</div>
 
 											<div class="radio">
-												<label>
-													<input disabled="" name="form-field-radio" type="radio" class="ace" />
-													<span class="lbl"> 头等舱</span>
+												<label> <input disabled="" name="form-field-radio"
+													type="radio" class="ace" /> <span class="lbl"> 头等舱</span>
 												</label>
 											</div>
 										</div>
@@ -861,34 +633,37 @@
 
 									<div class="controls col-xs-12 col-sm-6">
 										<!-- #section:custom/checkbox.switch -->
-										<label class="control-label bolder blue"> 开关形式的单选框</label>
-										<br /><br />
+										<label class="control-label bolder blue"> 开关形式的单选框</label> <br />
+										<br />
 										<div class="row">
 											<div class="col-xs-3">
-												<label>
-													<input name="switch-field-1" class="ace ace-switch" type="checkbox" />
-													<span class="lbl" data-lbl="开&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关"></span>
+												<label> <input name="switch-field-1"
+													class="ace ace-switch" type="checkbox" /> <span
+													class="lbl"
+													data-lbl="开&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关"></span>
 												</label>
 											</div>
 
 											<div class="col-xs-3">
-												<label>
-													<input name="switch-field-1" class="ace ace-switch ace-switch-3" type="checkbox" />
-													<span class="lbl" data-lbl="开&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关"></span>
+												<label> <input name="switch-field-1"
+													class="ace ace-switch ace-switch-3" type="checkbox" /> <span
+													class="lbl"
+													data-lbl="开&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关"></span>
 												</label>
 											</div>
 
 											<div class="col-xs-3">
-												<label>
-													<input name="switch-field-1" class="ace ace-switch ace-switch-6" type="checkbox" />
-													<span class="lbl"></span>
+												<label> <input name="switch-field-1"
+													class="ace ace-switch ace-switch-6" type="checkbox" /> <span
+													class="lbl"></span>
 												</label>
 											</div>
 
 											<div class="col-xs-3">
-												<label>
-													<input name="switch-field-1" class="ace ace-switch ace-switch-7" type="checkbox" />
-													<span class="lbl" data-lbl="开&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关"></span>
+												<label> <input name="switch-field-1"
+													class="ace ace-switch ace-switch-7" type="checkbox" /> <span
+													class="lbl"
+													data-lbl="开&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关"></span>
 												</label>
 											</div>
 
@@ -897,22 +672,22 @@
 
 										<!-- /section:custom/checkbox.switch -->
 									</div>
-								</div><!-- /.row -->
+								</div>
+								<!-- /.row -->
 
 
 								<div class="hr hr-24"></div>
 
-								<h3 class="header smaller lighter grey">
-									日期表单
-								</h3>
+								<h3 class="header smaller lighter grey">日期表单</h3>
 
 								<div class="row">
 									<div class="col-xs-12 col-sm-3">
 										<label for="id-date-picker-1">日期表单</label>
 										<div class="input-group">
-											<input class="form-control date-picker" id="id-date-picker-1" type="text" data-date-format="dd-mm-yyyy" />
-											<span class="input-group-addon">
-												<i class="fa fa-calendar bigger-110"></i>
+											<input class="form-control date-picker" id="id-date-picker-1"
+												type="text" data-date-format="dd-mm-yyyy" /> <span
+												class="input-group-addon"> <i
+												class="fa fa-calendar bigger-110"></i>
 											</span>
 										</div>
 									</div>
@@ -920,22 +695,19 @@
 									<div class="col-xs-12 col-sm-3">
 										<label for="id-date-picker-1">双天日期表单</label>
 										<div class="input-daterange input-group">
-											<input type="text" class=" form-control" name="start" />
-											<span class="input-group-addon">
-												<i class="fa fa-exchange"></i>
-											</span>
-
-											<input type="text" class=" form-control" name="end" />
+											<input type="text" class=" form-control" name="start" /> <span
+												class="input-group-addon"> <i class="fa fa-exchange"></i>
+											</span> <input type="text" class=" form-control" name="end" />
 										</div>
 									</div>
 
 									<div class="col-xs-12 col-sm-3">
 										<label for="id-date-picker-1">时间段选择日期表单</label>
 										<div class="input-group">
-											<span class="input-group-addon">
-												<i class="fa fa-calendar bigger-110"></i>
-											</span>
-											<input class="form-control" type="text" name="date-range-picker" id="id-date-range-picker-1" />
+											<span class="input-group-addon"> <i
+												class="fa fa-calendar bigger-110"></i>
+											</span> <input class="form-control" type="text"
+												name="date-range-picker" id="id-date-range-picker-1" />
 										</div>
 									</div>
 
@@ -943,8 +715,8 @@
 										<label for="id-date-picker-1">含时间的日期表单</label>
 										<div class="input-group">
 											<input id="date-timepicker1" type="text" class="form-control" />
-											<span class="input-group-addon">
-												<i class="fa fa-clock-o bigger-110"></i>
+											<span class="input-group-addon"> <i
+												class="fa fa-clock-o bigger-110"></i>
 											</span>
 										</div>
 									</div>
@@ -953,16 +725,23 @@
 
 							</form>
 
-						</div><!-- /.col -->
-					</div><!-- /.row -->
-				</div><!-- /.page-content-area -->
-			</div><!-- /.page-content -->
-		</div><!-- /.main-content -->
+						</div>
+						<!-- /.col -->
+					</div>
+					<!-- /.row -->
+				</div>
+				<!-- /.page-content-area -->
+			</div>
+			<!-- /.page-content -->
+		</div>
+		<!-- /.main-content -->
 
-		<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
-			<i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+		<a href="#" id="btn-scroll-up"
+			class="btn-scroll-up btn btn-sm btn-inverse"> <i
+			class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
 		</a>
-	</div><!-- /.main-container -->
+	</div>
+	<!-- /.main-container -->
 
 	<!-- basic scripts -->
 
